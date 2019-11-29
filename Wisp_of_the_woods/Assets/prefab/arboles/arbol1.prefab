@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 193038479693092802}
   - component: {fileID: 1881496931595277766}
   - component: {fileID: 2247248176699866265}
+  - component: {fileID: 3898033046884728225}
   m_Layer: 0
   m_Name: arbol1
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501554027343403383}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -27.794226, y: 0.035267334, z: 24.923744}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6263350975734309341}
@@ -78,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &3898033046884728225
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501554027343403383}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.7367836
+  m_Height: 25.870497
+  m_Direction: 1
+  m_Center: {x: -0.39348772, y: 12.935248, z: -0.066319615}
 --- !u!1 &6967276843349808078
 GameObject:
   m_ObjectHideFlags: 0
