@@ -11,7 +11,6 @@ public class characterMovement : MonoBehaviour
     public bool detectado;
     public bool escondido;
     public KeyCode TeclaSilvar;
-    public Vector2 Sensibility;
 
     public Vector3 checkpoint;
     public GameObject panelGameOver;
@@ -28,30 +27,74 @@ public class characterMovement : MonoBehaviour
             detectionManager.Add(FindObjectsOfType<DetectionManager>()[i].gameObject);
         }
         
-        //waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
+        waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
+    public bool grounded;
+    private Vector3 posCur;
+    private Quaternion rotCur;
+    public  GameObject posRay;
 
+    private void FixedUpdate()
+    {
+        if (!menuPausa)
+        {
+            if (!detectado && !quieto)
+            {
+                
+                /*else
+                {
+                    transform.position = Vector3.Lerp(transform.position, transform.position - Vector3.up * 1f, Time.deltaTime * 5);
+                    if (transform.eulerAngles.x > 15)
+                    {
+                        rotCur.x -= Time.deltaTime * 1000;
+                    }
+                    else if (transform.eulerAngles.x < 15)
+                    {
+                        rotCur.x += Time.deltaTime * 1000;
+                    }
+                    rotCur.eulerAngles = Vector3.zero;
+                    transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime);
 
+                }*/
+            }
+        }
+    }
+
+    private bool quieto;
     void Update()
     {
+        /*if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0 && grounded)
+        {
+            quieto = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
+           // GetComponent<Rigidbody>().useGravity = false;
+        }
+        else
+        {
+            quieto = false;
+            GetComponent<Rigidbody>().useGravity = true;
+        }
+        */
+
         if (!menuPausa)
         {
             if (!detectado)
             {
-                if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal")!=0) GetComponentInChildren<Animator>().SetBool("walk", true);
-                else GetComponentInChildren<Animator>().SetBool("walk", false);
-                if(Input.GetKeyDown(KeyCode.Space))
+                
+               /* if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal")!=0)
+                        GetComponentInChildren<Animator>().SetBool("walk", true);*/
+                //else GetComponentInChildren<Animator>().SetBool("walk", false);
+                /*if(Input.GetKeyDown(KeyCode.Space))
                 {
                     GetComponentInChildren<Animator>().SetTrigger("jump");
-                }
-                transform.Translate(camara.transform.forward * Input.GetAxis("Vertical") * velocidad * Time.deltaTime, Space.World);
-                transform.Translate(camara.transform.right * Input.GetAxis("Horizontal") * velocidad * Time.deltaTime, Space.World);
+                }*/
+             /*   transform.Translate(camara.transform.forward * Input.GetAxis("Vertical") * velocidad * Time.deltaTime, Space.World);
+                transform.Translate(camara.transform.right * Input.GetAxis("Horizontal") * velocidad * Time.deltaTime, Space.World);*/
 
-                rotacionActualHorizontal += Input.GetAxis("Mouse X") * Sensibility.x * Time.deltaTime;
                 //print(rotacionActualHorizontal);
-                transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, rotacionActualHorizontal, transform.localEulerAngles.z);
+               // transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, rotacionActualHorizontal, transform.localEulerAngles.z);
             }
             if (Input.GetKeyDown(TeclaSilvar))
             {
@@ -60,6 +103,12 @@ public class characterMovement : MonoBehaviour
             if (detectado)
             {
                 panelGameOver.SetActive(true);
+            }
+
+            if(Time.timeScale == 1)
+            {
+                GetComponent<Animator>().enabled = true;
+                GetComponent<CharacterMovement1>().enabled = true;
             }
         }
 
@@ -70,6 +119,8 @@ public class characterMovement : MonoBehaviour
             {
                 Time.timeScale = 0;
                 menuPausa = true;
+                GetComponent<Animator>().enabled = false;
+                GetComponent<CharacterMovement1>().enabled = false;
             }
         }
     }

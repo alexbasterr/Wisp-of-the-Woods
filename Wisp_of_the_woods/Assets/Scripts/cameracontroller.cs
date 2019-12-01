@@ -17,8 +17,9 @@ public class cameracontroller : MonoBehaviour
     public characterMovement characterMovement;
     public float minYAngle = -30;
     public float maxYAngle = 30;
+    public Vector2 Sensibility;
 
-    
+
 
     // Update is called once per frame
     void Update()
@@ -26,18 +27,19 @@ public class cameracontroller : MonoBehaviour
         if (!characterMovement.menuPausa)
         {
             rotacionActualVertical += Input.GetAxis("Mouse Y") * velocidadRotacionVertical * Time.deltaTime;
+            rotacionActualHorizontal += Input.GetAxis("Mouse X") * Sensibility.x * Time.deltaTime;
             rotacionActualVertical = Mathf.Clamp(rotacionActualVertical, minYAngle, maxYAngle);
             print(rotacionActualVertical);
             //distanciaJugador = new Vector3(distanciaJugador.x, rotacionActualVertical, distanciaJugador.z);
-            transform.parent.localRotation = Quaternion.Euler(-rotacionActualVertical, transform.parent.localEulerAngles.y, transform.parent.localEulerAngles.z);
+            transform.parent.localRotation = Quaternion.Euler(-rotacionActualVertical, rotacionActualHorizontal, transform.parent.localEulerAngles.z);
         }
         
     }
     private void LateUpdate()
     {
-        //transform.position = jugador.position - (distanciaJugador * zoomActual); //marcar la distancia entre camara y jugador
-        //transform.LookAt(jugador.position + Vector3.up * alturaMirarJugador);// siempre mira al jugador
-        //transform.RotateAround(jugador.position, Vector3.up, rotacionActualHorizontal);// siempre rota alrededor del jugador
+       //transform.position = jugador.position - (distanciaJugador * zoomActual); //marcar la distancia entre camara y jugador
+       //transform.LookAt(jugador.position + Vector3.up * alturaMirarJugador);// siempre mira al jugador
+       //transform.RotateAround(jugador.position, Vector3.up, rotacionActualHorizontal);// siempre rota alrededor del jugador
 
     }
 }

@@ -17,6 +17,7 @@ public class DetectionManager : MonoBehaviour
 
     private void Awake()
     {
+        player = FindObjectOfType<CharacterMovement1>().gameObject;
         lookatTarget = GetComponent<LookatTarget>();
     }
 

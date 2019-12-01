@@ -311,3 +311,6 @@ D:\unity p3\clase\juegasoo\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.ca
 D:\unity p3\clase\juegasoo\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 D:\unity p3\clase\juegasoo\obj\Debug\Assembly-CSharp.dll
 D:\unity p3\clase\juegasoo\obj\Debug\Assembly-CSharp.pdb
+C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.dll
