@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5219011185370024533}
   - component: {fileID: 7132379118753630537}
   - component: {fileID: 7976258248861487725}
+  - component: {fileID: 6382546064967480557}
   m_Layer: 0
   m_Name: arbol2Pino
   m_TagString: Untagged
@@ -78,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &6382546064967480557
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3206210753754675487}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.8221588
+  m_Height: 25.518225
+  m_Direction: 1
+  m_Center: {x: -0.023452759, y: 11.232181, z: 0.1131587}
 --- !u!1 &4739448272496128571
 GameObject:
   m_ObjectHideFlags: 0

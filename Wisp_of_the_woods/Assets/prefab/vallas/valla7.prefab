@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 6236084106397388266}
   - component: {fileID: 426836604364301201}
   - component: {fileID: 1159859455827934933}
-  - component: {fileID: 1233098244811909443}
+  - component: {fileID: 6134086017778057473}
   m_Layer: 0
   m_Name: vallaNormal
   m_TagString: Untagged
@@ -110,7 +110,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1233098244811909443
+--- !u!65 &6134086017778057473
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.4061482, y: 6.1132965, z: 10.584448}
-  m_Center: {x: 0.000030189753, y: 3.002437, z: -0.000015258789}
+  m_Center: {x: -0.00000032782572, y: 3.002437, z: 0}
 --- !u!1 &6564947967384871305
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 227535865247616231}
   - component: {fileID: 6154610521285585254}
   - component: {fileID: 4741006311705403475}
+  - component: {fileID: 6608196446194223070}
   m_Layer: 0
   m_Name: arbol5
   m_TagString: Untagged
@@ -78,6 +79,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &6608196446194223070
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368927624717432442}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.9065552
+  m_Height: 8.022156
+  m_Direction: 1
+  m_Center: {x: -0.08944607, y: 3.0787125, z: 0.17254639}
 --- !u!1 &1605122606395041694
 GameObject:
   m_ObjectHideFlags: 0
