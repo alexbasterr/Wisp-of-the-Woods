@@ -47,7 +47,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 73
+  controlID: 152
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -618,20 +618,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/descargado
+    - Assets/prefab/hierbas
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/descargado
+  - Assets/prefab/hierbas
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\wisp of the woods\Wisp-of-the-Woods\Wisp_of_the_woods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 40590000
-    m_LastClickedID: 22848
-    m_ExpandedIDs: 00000000bc41000040460000de490000f04c00005e4e0000fc510000285200006a57000020590000f45d00007c5e0000a65e00001863000068640000ac64000072650000ca1d0100cc1d0100ce1d0100d01d0100d21d0100d41d0100d61d0100d81d010000ca9a3b
+    scrollPos: {x: 0, y: 420}
+    m_SelectedIDs: 881e0100
+    m_LastClickedID: 73352
+    m_ExpandedIDs: 00000000bc410000d843000040460000de490000f04c00005e4e0000fc510000285200006a57000020590000f45d00007c5e0000a65e000018630000a263000068640000ac64000072650000ca1d0100cc1d0100ce1d0100d01d0100d21d0100d41d0100d61d0100d81d010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -686,7 +686,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fa3a000048614200303d0000183e0000184d0000dc3b000068f20000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -781,24 +781,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 458}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7ef9ffff68fbffff5adc0000
+      scrollPos: {x: 0, y: 64}
+      m_SelectedIDs: 52e1ffff
+      m_LastClickedID: -7854
+      m_ExpandedIDs: fc62ffff3c6cffff7a6cffffae6cffffe26cffff1a6dffffd48cffff68fbffffa8e40000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: hierbasPrefab
+        m_OriginalName: hierbasPrefab
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -40196
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -844,9 +844,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -176.87186, y: 77.20481, z: 117.83548}
+    m_Target: {x: -189.9715, y: 74.249214, z: 142.0505}
     speed: 2
-    m_Value: {x: -176.87186, y: 77.20481, z: 117.83548}
+    m_Value: {x: -189.9715, y: 74.249214, z: 142.0505}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -875,13 +875,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.064119466, y: -0.92149377, z: 0.34216896, w: -0.17333215}
+    m_Target: {x: -0.2709666, y: -0.14151563, z: 0.04074672, w: -0.9514959}
     speed: 2
-    m_Value: {x: -0.064881936, y: -0.92054105, z: 0.3433877, w: -0.17458346}
+    m_Value: {x: -0.27084365, y: -0.14291026, z: 0.04114378, w: -0.95106655}
   m_Size:
-    m_Target: 25.977491
+    m_Target: 4.75542
     speed: 2
-    m_Value: 24.858843
+    m_Value: 4.45542
   m_Ortho:
     m_Target: 0
     speed: 2
