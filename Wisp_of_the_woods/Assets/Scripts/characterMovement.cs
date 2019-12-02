@@ -83,7 +83,6 @@ public class characterMovement : MonoBehaviour
         }
     }
     
-
     public void ResetearEnemigos()
     {
         foreach (var detector in detectionManager)
@@ -93,5 +92,4 @@ public class characterMovement : MonoBehaviour
             detector.GetComponent<DetectionManager>().detectadoVisual = false;
         }
     }
-    
 }

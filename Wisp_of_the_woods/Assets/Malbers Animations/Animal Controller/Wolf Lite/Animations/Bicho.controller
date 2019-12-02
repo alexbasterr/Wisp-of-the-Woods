@@ -421,7 +421,7 @@ MonoBehaviour:
   onEnterMessage:
   - message: EnableLookAt
     typeM: 0
-    boolValue: 1
+    boolValue: 0
     intValue: 0
     floatValue: 0
     stringValue: 
@@ -1236,7 +1236,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102609589119262578}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
@@ -1548,7 +1548,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.79166675
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 2
   m_OrderedInterruption: 1
@@ -2020,7 +2020,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.1
   m_TransitionOffset: 0
   m_ExitTime: 0.79166675
-  m_HasExitTime: 0
+  m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 2
   m_OrderedInterruption: 1
@@ -2627,15 +2627,15 @@ AnimatorStateMachine:
   - {fileID: 1101972266087419890}
   m_EntryTransitions: []
   m_StateMachineTransitions:
-  - first: {fileID: 1107452262452175484}
-    second:
-    - {fileID: 1109143921519082920}
-  - first: {fileID: 1107666169614390224}
-    second:
-    - {fileID: 1109421566806355690}
   - first: {fileID: 1107807617028768648}
     second:
     - {fileID: 1109712732846451600}
+  - first: {fileID: 1107666169614390224}
+    second:
+    - {fileID: 1109421566806355690}
+  - first: {fileID: 1107452262452175484}
+    second:
+    - {fileID: 1109143921519082920}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 300, y: -84, z: 0}
   m_EntryPosition: {x: 312, y: 24, z: 0}
@@ -2693,13 +2693,13 @@ AnimatorStateMachine:
   - {fileID: 1109433564782451796}
   - {fileID: 1109629976594951376}
   m_StateMachineTransitions:
-  - first: {fileID: 1107070459965775536}
-    second:
-    - {fileID: 1109385210547945196}
   - first: {fileID: 1107469501483250876}
     second:
     - {fileID: 1109689128351012302}
     - {fileID: 1109033166447876592}
+  - first: {fileID: 1107070459965775536}
+    second:
+    - {fileID: 1109385210547945196}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 564, y: -120, z: 0}
   m_EntryPosition: {x: 144, y: -60, z: 0}
@@ -2873,7 +2873,7 @@ AnimatorTransition:
   m_Name: 
   m_Conditions: []
   m_DstStateMachine: {fileID: 0}
-  m_DstState: {fileID: 1102656112505453476}
+  m_DstState: {fileID: 0}
   m_Solo: 0
   m_Mute: 0
   m_IsExit: 0
