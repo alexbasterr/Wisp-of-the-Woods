@@ -9,10 +9,13 @@ public class CharacterMovement1 : MonoBehaviour
     
     void FixedUpdate()
     {
-
-        if(Input.GetAxis("Vertical") > 0)
-            transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * velocidad * Time.fixedDeltaTime,Space.Self);
-        else if (Input.GetAxis("Horizontal") > 0)
-            transform.Translate(Vector3.right * Input.GetAxis("Horizontal") * velocidad * Time.fixedDeltaTime, Space.Self);
+        if(Input.GetAxis("Horizontal") > 0)
+            transform.Translate(Vector3.forward * Input.GetAxis("Horizontal") * velocidad * Time.fixedDeltaTime, Space.Self);
+        else if(Input.GetAxis("Horizontal") < 0)
+            transform.Translate(Vector3.back * Input.GetAxis("Horizontal") * velocidad * Time.fixedDeltaTime, Space.Self);
+        else if (Input.GetAxis("Vertical") > 0)
+            transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * velocidad * Time.fixedDeltaTime, Space.Self);
+        else if (Input.GetAxis("Vertical") < 0)
+            transform.Translate(Vector3.back * Input.GetAxis("Vertical") * velocidad * Time.fixedDeltaTime, Space.Self);
     }
 }
