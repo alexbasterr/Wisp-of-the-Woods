@@ -5,14 +5,10 @@ using UnityEngine;
 public class DetectionView : MonoBehaviour
 {
 
-    private DetectionManager detectionManager;
+    public DetectionManager detectionManager;
     
 
-    private void Awake()
-    {
-        detectionManager = transform.parent.parent.gameObject.GetComponent<DetectionManager>();
-    }
-
+   
 
     private void OnTriggerStay(Collider other)
     {

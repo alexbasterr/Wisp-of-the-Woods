@@ -31,70 +31,15 @@ public class characterMovement : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-    public bool grounded;
-    private Vector3 posCur;
-    private Quaternion rotCur;
-    public  GameObject posRay;
 
-    private void FixedUpdate()
-    {
-        if (!menuPausa)
-        {
-            if (!detectado && !quieto)
-            {
-                
-                /*else
-                {
-                    transform.position = Vector3.Lerp(transform.position, transform.position - Vector3.up * 1f, Time.deltaTime * 5);
-                    if (transform.eulerAngles.x > 15)
-                    {
-                        rotCur.x -= Time.deltaTime * 1000;
-                    }
-                    else if (transform.eulerAngles.x < 15)
-                    {
-                        rotCur.x += Time.deltaTime * 1000;
-                    }
-                    rotCur.eulerAngles = Vector3.zero;
-                    transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime);
-
-                }*/
-            }
-        }
-    }
-
-    private bool quieto;
     void Update()
     {
-        /*if (Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0 && grounded)
-        {
-            quieto = true;
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
-           // GetComponent<Rigidbody>().useGravity = false;
-        }
-        else
-        {
-            quieto = false;
-            GetComponent<Rigidbody>().useGravity = true;
-        }
-        */
-
         if (!menuPausa)
         {
             if (!detectado)
             {
                 
-               /* if (Input.GetAxisRaw("Vertical") != 0 || Input.GetAxisRaw("Horizontal")!=0)
-                        GetComponentInChildren<Animator>().SetBool("walk", true);*/
-                //else GetComponentInChildren<Animator>().SetBool("walk", false);
-                /*if(Input.GetKeyDown(KeyCode.Space))
-                {
-                    GetComponentInChildren<Animator>().SetTrigger("jump");
-                }*/
-             /*   transform.Translate(camara.transform.forward * Input.GetAxis("Vertical") * velocidad * Time.deltaTime, Space.World);
-                transform.Translate(camara.transform.right * Input.GetAxis("Horizontal") * velocidad * Time.deltaTime, Space.World);*/
-
-                //print(rotacionActualHorizontal);
-               // transform.localRotation = Quaternion.Euler(transform.localEulerAngles.x, rotacionActualHorizontal, transform.localEulerAngles.z);
+              
             }
             if (Input.GetKeyDown(TeclaSilvar))
             {

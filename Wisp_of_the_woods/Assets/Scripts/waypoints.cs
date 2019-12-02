@@ -19,8 +19,10 @@ public class waypoints : MonoBehaviour
     public float auxRot;
 
     private float velocidadInvestigar = 20;
+
     private void Awake()
     {
+        player = FindObjectOfType<characterMovement>().gameObject;
         detectionManager = GetComponent<DetectionManager>();
     }
 

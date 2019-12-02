@@ -14,7 +14,7 @@ public class ActivarAnimacion : MonoBehaviour
 
     public void cambiarPosicion()
     {
-        characterMovement.transform.parent.position = characterMovement.checkpoint;
+        characterMovement.transform.position = characterMovement.checkpoint;
         characterMovement.ResetearEnemigos();
         characterMovement.detectado = false;
     }
