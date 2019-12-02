@@ -314,3 +314,6 @@ D:\unity p3\clase\juegasoo\obj\Debug\Assembly-CSharp.pdb
 C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
 C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\Users\juani\Documents\GitHub\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.dll
+E:\DISEÑO DE VIDEOJUEGOS\PROYECTO FINAL\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+E:\DISEÑO DE VIDEOJUEGOS\PROYECTO FINAL\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+E:\DISEÑO DE VIDEOJUEGOS\PROYECTO FINAL\Wisp-of-the-Woods\Wisp_of_the_woods\obj\Debug\Assembly-CSharp.dll
