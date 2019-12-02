@@ -29,5 +29,6 @@ public class CharacterMovement1 : MonoBehaviour
             transform.Translate(Vector3.forward * Input.GetAxis("Vertical") * velocidad * Time.fixedDeltaTime, Space.Self);
         else if (Input.GetAxis("Vertical") < 0)
             transform.Translate(Vector3.back * Input.GetAxis("Vertical") * velocidad * Time.fixedDeltaTime, Space.Self);
+            
     }
 }
