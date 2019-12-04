@@ -42,7 +42,11 @@ public class waypoints : MonoBehaviour
 
         if (navMeshAgent.remainingDistance < navMeshAgent.stoppingDistance && !detectionManager.detectadoVisual && !detectionManager.detectadoOido)
         {
-            m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1) % checkpoint.Length;
+            if (m_CurrentWaypointIndex <= checkpoint.Length - 2)
+                m_CurrentWaypointIndex = (m_CurrentWaypointIndex + 1);
+            else if (m_CurrentWaypointIndex == checkpoint.Length -1 )
+                m_CurrentWaypointIndex = 0;
+
             navMeshAgent.SetDestination(checkpoint[m_CurrentWaypointIndex].transform.position);
         }
         else if(detectionManager.detectadoOido)
