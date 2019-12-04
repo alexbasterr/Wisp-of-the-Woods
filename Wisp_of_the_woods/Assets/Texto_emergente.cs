@@ -10,7 +10,11 @@ public class Texto_emergente : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
+        {
+            other.GetComponent<characterMovement>().interactuarArbusto = true;
+            other.GetComponent<characterMovement>().arbusto = transform.parent.gameObject;
             go.SetActive(true);
+        }
 
     }
 
@@ -18,6 +22,9 @@ public class Texto_emergente : MonoBehaviour
     {
 
         if (other.tag == "Player")
+        {
+            other.GetComponent<characterMovement>().interactuarArbusto = false;
             go.SetActive(false);
+        }
     }
 }

@@ -4,20 +4,21 @@ using UnityEngine;
 
 public class characterMovement : MonoBehaviour
 {
-    public float velocidad;
-    public GameObject camara;
     public List<GameObject> detectionManager = new List<GameObject>();
     private waypoints waitPointsManager;
     public bool detectado;
     public bool escondido;
+    public bool interactuarArbusto;
     public KeyCode TeclaSilvar;
 
     public Vector3 checkpoint;
     public GameObject panelGameOver;
 
     public bool menuPausa;
-    private float rotacionActualHorizontal;
-    private float rotacionActualVertical;
+
+    public GameObject arbusto;
+
+    public MalbersAnimations.MFreeLookCamera camara;
 
     private void Awake()
     {
@@ -27,7 +28,6 @@ public class characterMovement : MonoBehaviour
             detectionManager.Add(FindObjectsOfType<DetectionManager>()[i].gameObject);
         }
         
-        //waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -38,8 +38,49 @@ public class characterMovement : MonoBehaviour
         {
             if (!detectado)
             {
+                if (Input.GetKeyDown(TeclaSilvar))
+                {
+                    Silvar();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+                {
+                    if (!menuPausa)
+                    {
+                        Time.timeScale = 0;
+                        menuPausa = true;
+                        GetComponent<Animator>().enabled = false;
+                        GetComponent<CharacterMovement1>().enabled = false;
+                    }
+                }
+
+                if(interactuarArbusto)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space) && !escondido)
+                    {
+                        camara.SetTarget(arbusto.transform.GetChild(0).transform);
+                        arbusto.transform.GetChild(1).gameObject.transform.position = transform.position;
+                        arbusto.transform.GetChild(1).gameObject.transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                        transform.position = arbusto.transform.GetChild(2).transform.position;
+                        gameObject.transform.GetChild(3).gameObject.SetActive(false);
+                        GetComponent<CharacterMovement1>().enabled = false;
+                        GetComponent<Animator>().enabled = false;
+                        escondido = true;
+                    }
+                    else if(escondido && Input.GetKeyDown(KeyCode.Space))
+                    {
+                        camara.SetTarget(transform.GetChild(0).transform);
+                        transform.position = arbusto.transform.GetChild(1).transform.position;
+                        transform.rotation = arbusto.transform.GetChild(1).transform.rotation;
+                        gameObject.transform.GetChild(3).gameObject.SetActive(true);
+                        GetComponent<CharacterMovement1>().enabled = true;
+                        GetComponent<Animator>().enabled = true;
+                        escondido = false;
+                    }
+                }
+
                 
-              
+
             }
             else
             {
@@ -48,10 +89,7 @@ public class characterMovement : MonoBehaviour
                 GetComponent<Animator>().enabled = true;
                 GetComponent<CharacterMovement1>().enabled = true;
             }
-            if (Input.GetKeyDown(TeclaSilvar))
-            {
-                Silvar();
-            }
+            
 
             foreach (var item in detectionManager)
             {
@@ -64,16 +102,7 @@ public class characterMovement : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (!menuPausa)
-            {
-                Time.timeScale = 0;
-                menuPausa = true;
-                GetComponent<Animator>().enabled = false;
-                GetComponent<CharacterMovement1>().enabled = false;
-            }
-        }
+        
     }
 
     public void reactivarScripts()
