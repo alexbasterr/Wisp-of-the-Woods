@@ -21,6 +21,7 @@ public class characterMovement : MonoBehaviour
     public GameObject exclamacion;
     public MalbersAnimations.MFreeLookCamera camara;
     public GameObject arbusto;
+    public bool llamarHermano;
 
     private void Awake()
     {
@@ -43,7 +44,7 @@ public class characterMovement : MonoBehaviour
 
                 if(interactuarArbustos)
                 {
-                    if (!saltar && Input.GetKeyDown(KeyCode.Space))
+                    if (!saltar && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0)))
                     {
                         saltar = true;
                         transform.GetChild(3).gameObject.SetActive(false);
@@ -51,7 +52,7 @@ public class characterMovement : MonoBehaviour
                         GetComponent<CharacterMovement1>().enabled = false;
 
                     }
-                    else if (saltar && Input.GetKeyDown(KeyCode.Space))
+                    else if (saltar && (Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown(KeyCode.JoystickButton0)))
                     {
                         saltar = false;
                         transform.GetChild(3).gameObject.SetActive(true);
@@ -63,7 +64,7 @@ public class characterMovement : MonoBehaviour
 
                 if (aullar)
                 {
-                    if (Input.GetKeyDown(KeyCode.F))
+                    if (Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton1))
                     {
                         GetComponent<Animator>().SetBool("Aullar", true);
                         GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
@@ -73,7 +74,7 @@ public class characterMovement : MonoBehaviour
 
                 foreach (var item in detectionManager)
                 {
-                    if (Input.GetKeyDown(TeclaSilvar) && item.GetComponent<DetectionManager>().detectable)
+                    if ((Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton1)) && item.GetComponent<DetectionManager>().detectable)
                     {
                         GetComponent<Animator>().speed = 2;
                         Silvar();
@@ -84,7 +85,7 @@ public class characterMovement : MonoBehaviour
                     }
                 }
                 
-                if (Input.GetKeyDown(KeyCode.P))
+                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.JoystickButton7))
                 {
                     if (!menuPausa)
                     {
@@ -131,9 +132,13 @@ public class characterMovement : MonoBehaviour
     }
     public void desactivarAullarPiedra()
     {
-        aullarGameObject.GetComponent<Texto_emergente>().desactivar();
-        aullarGameObject.SetActive(false);
-        exclamacion.SetActive(true);
+        if (llamarHermano)
+        {
+            aullarGameObject.GetComponent<Texto_emergente>().desactivar();
+            aullarGameObject.SetActive(false);
+            exclamacion.SetActive(true);
+        }
+        
     }
 
     public void Silvar()
