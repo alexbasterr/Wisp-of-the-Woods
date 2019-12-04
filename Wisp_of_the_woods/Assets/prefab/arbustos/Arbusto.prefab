@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1543196227469892254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2084204185808900282}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2084204185808900282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543196227469892254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9026208295148800491}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9026208294974109730
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,9 +41,6 @@ GameObject:
   - component: {fileID: 9026208295148800491}
   - component: {fileID: 9026208294974109735}
   - component: {fileID: 9026208294974109734}
-  - component: {fileID: 9026208294974109733}
-  - component: {fileID: 9026208294974109732}
-  - component: {fileID: 9026208294974109731}
   m_Layer: 0
   m_Name: Arbusto
   m_TagString: Untagged
@@ -28,11 +55,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026208294974109730}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.088165, y: 58.47982, z: 46.87841}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 9026208295107646241}
+  - {fileID: 2084204185808900282}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -82,48 +110,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!135 &9026208294974109733
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9026208294974109730}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4611386
-  m_Center: {x: 0.0055355523, y: 0.79781425, z: 0}
---- !u!114 &9026208294974109732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9026208294974109730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cff0b31eba3ec9419b22741dc46b45b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Normal: {r: 0, g: 0.82643604, b: 1, a: 1}
-  Escondido: {r: 0.003680706, g: 1, b: 0, a: 1}
-  material: {fileID: 2100000, guid: 6d87d8f0e4437254ba85d4fa53404024, type: 2}
---- !u!136 &9026208294974109731
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9026208294974109730}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 1.8304672
-  m_Height: 4.563129
-  m_Direction: 2
-  m_Center: {x: -0.009398699, y: 1.566658, z: -0.41417527}
 --- !u!1 &9026208295107646240
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,9 +121,10 @@ GameObject:
   - component: {fileID: 9026208295107646241}
   - component: {fileID: 9026208295107646242}
   - component: {fileID: 9026208295107646243}
+  - component: {fileID: 825459063}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Arbusto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
@@ -181,4 +168,17 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.9035149
+  m_Center: {x: 0.095695496, y: 0, z: -0.17224503}
+--- !u!135 &825459063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9026208295107646240}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.26901
   m_Center: {x: 0.095695496, y: 0, z: -0.17224503}

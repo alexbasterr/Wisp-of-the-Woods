@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MalbersAnimations.Utilities;
 
 public class characterMovement : MonoBehaviour
 {
-    public float velocidad;
-    public GameObject camara;
     public List<GameObject> detectionManager = new List<GameObject>();
     private waypoints waitPointsManager;
     public bool detectado;
@@ -14,10 +13,14 @@ public class characterMovement : MonoBehaviour
 
     public Vector3 checkpoint;
     public GameObject panelGameOver;
-
     public bool menuPausa;
-    private float rotacionActualHorizontal;
-    private float rotacionActualVertical;
+    public bool interactuarArbustos;
+    public bool saltar;
+    public bool aullar;
+    public GameObject aullarGameObject;
+    public GameObject exclamacion;
+    public MalbersAnimations.MFreeLookCamera camara;
+    public GameObject arbusto;
 
     private void Awake()
     {
@@ -27,7 +30,6 @@ public class characterMovement : MonoBehaviour
             detectionManager.Add(FindObjectsOfType<DetectionManager>()[i].gameObject);
         }
         
-        //waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -38,8 +40,60 @@ public class characterMovement : MonoBehaviour
         {
             if (!detectado)
             {
+
+                if(interactuarArbustos)
+                {
+                    if (!saltar && Input.GetKeyDown(KeyCode.Space))
+                    {
+                        saltar = true;
+                        transform.GetChild(3).gameObject.SetActive(false);
+                        camara.SetTarget(arbusto);
+                        GetComponent<CharacterMovement1>().enabled = false;
+
+                    }
+                    else if (saltar && Input.GetKeyDown(KeyCode.Space))
+                    {
+                        saltar = false;
+                        transform.GetChild(3).gameObject.SetActive(true);
+                        camara.SetTarget(transform.GetChild(0).transform);
+                        GetComponent<CharacterMovement1>().enabled = true;
+                        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+                    }
+                }
+
+                if (aullar)
+                {
+                    if (Input.GetKeyDown(KeyCode.F))
+                    {
+                        GetComponent<Animator>().SetBool("Aullar", true);
+                        GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
+                        GetComponent<CharacterMovement1>().enabled = false;
+                    }
+                }
+
+                foreach (var item in detectionManager)
+                {
+                    if (Input.GetKeyDown(TeclaSilvar) && item.GetComponent<DetectionManager>().detectable)
+                    {
+                        GetComponent<Animator>().speed = 2;
+                        Silvar();
+                        aullar = true;
+                        GetComponent<Animator>().SetBool("Aullar", true);
+                        GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
+                        GetComponent<CharacterMovement1>().enabled = false;
+                    }
+                }
                 
-              
+                if (Input.GetKeyDown(KeyCode.P))
+                {
+                    if (!menuPausa)
+                    {
+                        Time.timeScale = 0;
+                        menuPausa = true;
+                        GetComponent<Animator>().enabled = false;
+                        GetComponent<CharacterMovement1>().enabled = false;
+                    }
+                }
             }
             else
             {
@@ -48,10 +102,7 @@ public class characterMovement : MonoBehaviour
                 GetComponent<Animator>().enabled = true;
                 GetComponent<CharacterMovement1>().enabled = true;
             }
-            if (Input.GetKeyDown(TeclaSilvar))
-            {
-                Silvar();
-            }
+            
 
             foreach (var item in detectionManager)
             {
@@ -62,18 +113,6 @@ public class characterMovement : MonoBehaviour
                 }
             }
         }
-
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (!menuPausa)
-            {
-                Time.timeScale = 0;
-                menuPausa = true;
-                GetComponent<Animator>().enabled = false;
-                GetComponent<CharacterMovement1>().enabled = false;
-            }
-        }
     }
 
     public void reactivarScripts()
@@ -82,11 +121,26 @@ public class characterMovement : MonoBehaviour
         GetComponent<CharacterMovement1>().enabled = true;
     }
 
+    public void desactivarAullar()
+    {
+        GetComponent<Animator>().speed = 1;
+        aullar = false;
+        GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = false;
+        GetComponent<Animator>().SetBool("Aullar", false);
+        GetComponent<CharacterMovement1>().enabled = true;
+    }
+    public void desactivarAullarPiedra()
+    {
+        aullarGameObject.GetComponent<Texto_emergente>().desactivar();
+        aullarGameObject.SetActive(false);
+        exclamacion.SetActive(true);
+    }
+
     public void Silvar()
     {
         foreach (var detector in detectionManager)
         {
-            if (detector.GetComponent<DetectionManager>().detectable)
+            if (detector.GetComponent<DetectionManager>().detectable && !aullar)
             {
                 detector.GetComponent<DetectionManager>().detectadoOido = true;
                 detector.GetComponent<waypoints>().posicionOido = transform.position;
