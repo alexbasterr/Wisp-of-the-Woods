@@ -47,6 +47,7 @@ public class characterMovement : MonoBehaviour
                     if (!saltar && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0)))
                     {
                         saltar = true;
+                        escondido = true;
                         transform.GetChild(3).gameObject.SetActive(false);
                         camara.SetTarget(arbusto);
                         GetComponent<CharacterMovement1>().enabled = false;
@@ -55,6 +56,7 @@ public class characterMovement : MonoBehaviour
                     else if (saltar && (Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown(KeyCode.JoystickButton0)))
                     {
                         saltar = false;
+                        escondido = false;
                         transform.GetChild(3).gameObject.SetActive(true);
                         camara.SetTarget(transform.GetChild(0).transform);
                         GetComponent<CharacterMovement1>().enabled = true;
