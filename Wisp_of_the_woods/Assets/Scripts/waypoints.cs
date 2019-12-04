@@ -20,6 +20,8 @@ public class waypoints : MonoBehaviour
 
     private float velocidadInvestigar = 20;
 
+    private bool detectado;
+
     private void Awake()
     {
         player = FindObjectOfType<characterMovement>().gameObject;
@@ -54,16 +56,31 @@ public class waypoints : MonoBehaviour
             }
         }
 
-        if (detectionManager.detectadoVisual)
+        if (detectionManager.detectadoVisual && !detectado)
         {
             navMeshAgent.SetDestination(player.transform.position);
             navMeshAgent.stoppingDistance = 3.5f;
+            detectado = true;
+        }
+
+        if(detectionManager.detectadoVisual && navMeshAgent.remainingDistance <= navMeshAgent.stoppingDistance)
+        {
+            navMeshAgent.isStopped = true;
+            player.GetComponent<characterMovement>().detectado = true;
+            detectado = false;
+            StartCoroutine(cambiarLuz());
         }
 
         if (investigando)
         {
             StartCoroutine(Investigar());
         }
+    }
+    public IEnumerator cambiarLuz()
+    {
+        yield return new WaitForSeconds(1);
+        navMeshAgent.isStopped = false;
+        detectionManager.spotLight.color = detectionManager.colorLight;
     }
 
     public IEnumerator  Investigar()

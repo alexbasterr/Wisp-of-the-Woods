@@ -222,8 +222,8 @@ namespace MalbersAnimations.Controller
         /// <summary>Link all Parameters to the animator</summary>
         protected virtual void UpdateAnimatorParameters()
         {
-            Anim.SetFloat(hash_Vertical, VerticalSmooth);
-            Anim.SetFloat(hash_Horizontal, HorizontalSmooth);
+            //Anim.SetFloat(hash_Vertical, VerticalSmooth);
+            //Anim.SetFloat(hash_Horizontal, HorizontalSmooth);
             Anim.SetBool(hash_Movement, MovementDetected);
 
             if (hasUpDown) Anim.SetFloat(hash_UpDown, UpDownSmooth);

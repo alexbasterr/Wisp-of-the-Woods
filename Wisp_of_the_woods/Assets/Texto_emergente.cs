@@ -9,14 +9,15 @@ public class Texto_emergente : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-        go.SetActive(true);
+        if(other.tag == "Player")
+            go.SetActive(true);
 
     }
 
     void OnTriggerExit(Collider other)
     {
 
-        go.SetActive(false);
+        if (other.tag == "Player")
+            go.SetActive(false);
     }
 }

@@ -27,7 +27,7 @@ public class characterMovement : MonoBehaviour
             detectionManager.Add(FindObjectsOfType<DetectionManager>()[i].gameObject);
         }
         
-        waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
+        //waitPointsManager = FindObjectOfType<waypoints>().GetComponent<waypoints>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -41,19 +41,25 @@ public class characterMovement : MonoBehaviour
                 
               
             }
+            else
+            {
+                panelGameOver.SetActive(true);
+                ResetearEnemigos();
+                GetComponent<Animator>().enabled = true;
+                GetComponent<CharacterMovement1>().enabled = true;
+            }
             if (Input.GetKeyDown(TeclaSilvar))
             {
                 Silvar();
             }
-            if (detectado)
-            {
-                panelGameOver.SetActive(true);
-            }
 
-            if(Time.timeScale == 1)
+            foreach (var item in detectionManager)
             {
-                GetComponent<Animator>().enabled = true;
-                GetComponent<CharacterMovement1>().enabled = true;
+                if(item.GetComponent<DetectionManager>().detectadoVisual)
+                {
+                    GetComponent<Animator>().enabled = false;
+                    GetComponent<CharacterMovement1>().enabled = false;
+                }
             }
         }
 
@@ -70,6 +76,11 @@ public class characterMovement : MonoBehaviour
         }
     }
 
+    public void reactivarScripts()
+    {
+        GetComponent<Animator>().enabled = true;
+        GetComponent<CharacterMovement1>().enabled = true;
+    }
 
     public void Silvar()
     {
@@ -87,6 +98,9 @@ public class characterMovement : MonoBehaviour
     {
         foreach (var detector in detectionManager)
         {
+            detector.GetComponent<waypoints>().navMeshAgent.isStopped = false;
+            detector.GetComponent<waypoints>().enabled = false;
+            detector.GetComponent<waypoints>().enabled = true;
             detector.GetComponent<DetectionManager>().detectable = false;
             detector.GetComponent<DetectionManager>().detectadoOido = false;
             detector.GetComponent<DetectionManager>().detectadoVisual = false;

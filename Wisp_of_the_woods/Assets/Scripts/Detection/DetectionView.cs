@@ -7,9 +7,6 @@ public class DetectionView : MonoBehaviour
 
     public DetectionManager detectionManager;
     
-
-   
-
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "Player")

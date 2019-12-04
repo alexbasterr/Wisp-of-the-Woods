@@ -27,11 +27,9 @@ public class DetectionManager : MonoBehaviour
         {
             spotLight.color = Color.red;
             lookatTarget.enabled = true;
-            player.GetComponent<characterMovement>().detectado = true;
         }
         else
         {
-            spotLight.color = colorLight;
             lookatTarget.enabled = false;
         }
     }
