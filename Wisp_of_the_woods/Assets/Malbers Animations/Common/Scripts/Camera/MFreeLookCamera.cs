@@ -38,8 +38,8 @@ namespace MalbersAnimations
         public float m_TiltMin = 45f;                               // The minimum value of the x axis rotation of the pivot.
 
         [Header("Camera Input Axis")]
-        public InputAxis Vertical = new InputAxis("Mouse Y", true, false);
-        public InputAxis Horizontal = new InputAxis("Mouse X", true, false);
+        public InputAxis Vertical;//= new InputAxis("Mouse Y", true, false);
+        public InputAxis Horizontal; //= new InputAxis("Mouse X", true, false);
         private IGravity TargetGravity;
 
         [Space]
@@ -174,7 +174,7 @@ namespace MalbersAnimations
 
             transform.position = Vector3.Lerp(transform.position, m_Target.position, deltaTime * m_MoveSpeed);  // Move the rig towards target position.
         }
-
+        
         private void UpdateState(FreeLookCameraState state)
         {
             if (state == null) return;
@@ -214,6 +214,8 @@ namespace MalbersAnimations
         {
             if (updateType == UpdateType.FixedUpdate)
             {
+                if(Input.GetAxis("VerticalCamara") == 0 && Input.GetAxis("HorizontalCamara") == 0)
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
                 FollowTarget(Time.fixedDeltaTime);   
                 HandleRotationMovement(Time.fixedDeltaTime);
             }

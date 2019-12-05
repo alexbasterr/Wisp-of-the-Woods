@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ManagerBotones : MonoBehaviour
 {
+    public bool MenuPrincipal;
+    public GameObject controles;
+    public GameObject titulo;
+    public bool activoControles;
+    public EventSystem eventSystem;
 
     private void OnLevelWasLoaded(int level)
     {
@@ -13,6 +20,7 @@ public class ManagerBotones : MonoBehaviour
     }
 
     public GameObject menuPausa;
+    private object eventData;
 
     public void activarGameObject(GameObject objeto)
     {
@@ -39,6 +47,13 @@ public class ManagerBotones : MonoBehaviour
             menuPausa.SetActive(false);
         }
 
+        if (activoControles && Input.GetKeyDown(KeyCode.JoystickButton2))
+        {
+            controles.SetActive(false);
+            titulo.SetActive(true);
+            eventSystem.gameObject.SetActive(true);
+        }
+
     }
 
     public void Exit()
@@ -56,5 +71,13 @@ public class ManagerBotones : MonoBehaviour
     {
         menuPausa.SetActive(false);
         SceneManager.LoadScene(0);
+    }
+
+    
+    public void activarControles()
+    {
+        activoControles = true;
+        controles.SetActive(true);
+        eventSystem.gameObject.SetActive(false);
     }
 }

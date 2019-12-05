@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using MalbersAnimations.Utilities;
+using UnityStandardAssets.Cameras;
 
 public class characterMovement : MonoBehaviour
 {
@@ -41,19 +42,29 @@ public class characterMovement : MonoBehaviour
         {
             if (!detectado)
             {
-
-                if(interactuarArbustos)
+                if (aullar)
                 {
-                    if (!saltar && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0)))
+                    if (Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton0))
                     {
+                        GetComponent<Animator>().SetBool("Aullar", true);
+                        GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
+                        GetComponent<CharacterMovement1>().enabled = false;
+                    }
+                }
+
+                if (interactuarArbustos)
+                {
+                    if (!saltar && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton1)))
+                    {
+                        GetComponent<LookatTarget>().enabled = true;
+                        GetComponent<LookatTarget>().SetTarget(arbusto.transform);
                         saltar = true;
                         escondido = true;
-                        transform.GetChild(3).gameObject.SetActive(false);
-                        camara.SetTarget(arbusto);
+                        GetComponent<Animator>().SetBool("Salto", true);
                         GetComponent<CharacterMovement1>().enabled = false;
 
                     }
-                    else if (saltar && (Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown(KeyCode.JoystickButton0)))
+                    else if (saltar && (Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown(KeyCode.JoystickButton1)))
                     {
                         saltar = false;
                         escondido = false;
@@ -64,19 +75,11 @@ public class characterMovement : MonoBehaviour
                     }
                 }
 
-                if (aullar)
-                {
-                    if (Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton1))
-                    {
-                        GetComponent<Animator>().SetBool("Aullar", true);
-                        GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
-                        GetComponent<CharacterMovement1>().enabled = false;
-                    }
-                }
+                
 
                 foreach (var item in detectionManager)
                 {
-                    if ((Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton1)) && item.GetComponent<DetectionManager>().detectable)
+                    if ((Input.GetKeyDown(TeclaSilvar) || Input.GetKeyDown(KeyCode.JoystickButton0)) && item.GetComponent<DetectionManager>().detectable)
                     {
                         GetComponent<Animator>().speed = 2;
                         Silvar();
@@ -84,6 +87,8 @@ public class characterMovement : MonoBehaviour
                         GetComponent<Animator>().SetBool("Aullar", true);
                         GetComponent<MalbersAnimations.Controller.MAnimal>().lockMovement.Value = true;
                         GetComponent<CharacterMovement1>().enabled = false;
+                        
+                        
                     }
                 }
                 
@@ -166,5 +171,14 @@ public class characterMovement : MonoBehaviour
             detector.GetComponent<DetectionManager>().detectadoOido = false;
             detector.GetComponent<DetectionManager>().detectadoVisual = false;
         }
+    }
+
+
+    public void saltoFalse()
+    {
+        GetComponent<LookatTarget>().enabled = false;
+        camara.SetTarget(arbusto);
+        transform.GetChild(3).gameObject.SetActive(false);
+        GetComponent<Animator>().SetBool("Salto", false);
     }
 }
