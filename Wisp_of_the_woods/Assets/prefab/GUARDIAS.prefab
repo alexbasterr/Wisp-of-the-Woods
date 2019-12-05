@@ -48,6 +48,7 @@ Transform:
   - {fileID: 4251673953684496005}
   - {fileID: 4251673952887418829}
   - {fileID: 4251673954061867890}
+  - {fileID: 7849389465986397310}
   m_Father: {fileID: 6336099371470441772}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -128,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6336099371470441772
 Transform:
   m_ObjectHideFlags: 0
@@ -146,6 +147,116 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1713063508
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6336099369992441131}
+    m_Modifications:
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -81.98256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 123.519875
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 88.24606
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Guardia 2 puntos
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827464872785678, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827464872785678, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827464872785678, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 25
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
+--- !u!4 &7849389465986397310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1713063508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4938191380336904013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -153,11 +264,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -213,25 +319,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -242,16 +333,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 5.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 22.05
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -273,11 +354,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (17)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -286,7 +362,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 105.01
+      value: 104.494
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -333,60 +409,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (17)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.04
+      value: -16.68
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.5
+      value: 6.11
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.48
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 24.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -403,11 +449,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -463,65 +504,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.73
+      value: -6.27
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.98
       objectReference: {fileID: 0}
+    - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.03
+      objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.03
+      value: -0.31
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 15.48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -538,11 +549,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (20)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -598,25 +604,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (20)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -635,13 +626,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19.95
+      propertyPath: m_LocalPosition.y
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.12
+      propertyPath: m_LocalPosition.z
+      value: 19.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -658,11 +649,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -671,7 +657,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 103.261
+      value: 102.85
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -718,25 +704,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (6)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -758,21 +729,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 20.22
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
 --- !u!4 &4251673954156214674 stripped
@@ -788,11 +744,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -848,25 +799,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (9)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -888,21 +824,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 6.82
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
 --- !u!4 &4251673954244281806 stripped
@@ -918,25 +839,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (16)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 83.4
+      value: 75.75
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 106.813
+      value: 106.47
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -60.7
+      value: -54.16
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -978,60 +894,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (16)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -40.2
+      value: -24.11
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.9
+      value: 30.62
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -0.95
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 14.07
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -1048,11 +934,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1108,35 +989,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (5)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -22.41
+      value: -15.33
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.41
+      value: 13.88
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1147,21 +1013,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -1178,21 +1029,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099370764051432}
     m_Modifications:
-    - target: {fileID: 5511277397354780847, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_Name
-      value: GuardiaCompleto (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5511277397354780847, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5511277397354780847, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1263357531578678305, guid: d6225aa7943d09f498d94c3f3b924f66,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1248,25 +1084,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7930655263207056269, guid: d6225aa7943d09f498d94c3f3b924f66,
+    - target: {fileID: 5511277397354780847, guid: d6225aa7943d09f498d94c3f3b924f66,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263207056258, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263878850855, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263878850852, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: GuardiaCompleto (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7930655264279851205, guid: d6225aa7943d09f498d94c3f3b924f66,
         type: 3}
@@ -1310,6 +1131,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7930655264096009396, guid: d6225aa7943d09f498d94c3f3b924f66,
         type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930655264096009396, guid: d6225aa7943d09f498d94c3f3b924f66,
+        type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.9
       objectReference: {fileID: 0}
@@ -1317,91 +1143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 7.12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264096009396, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 6928255805584547156, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6928255805584547125, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6928255805584547146, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655265209665918, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6928255805584547124, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263127638476, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263183191891, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264055360970, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264096009419, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264279851204, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264787919134, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655265204207296, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263207056263, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655263878850875, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655264902729795, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7930655265195981060, guid: d6225aa7943d09f498d94c3f3b924f66,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6225aa7943d09f498d94c3f3b924f66, type: 3}
@@ -1418,11 +1159,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (15)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1431,7 +1167,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 111.097
+      value: 110.64
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1478,60 +1214,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (15)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.4
+      value: -22.46
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 7.21
+      value: 5.03
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.01
+      value: 1.57
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 17.77
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -1548,11 +1254,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (12)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1561,7 +1262,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 111.82
+      value: 113.296
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1608,25 +1309,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (12)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1641,27 +1327,12 @@ PrefabInstance:
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.9
+      value: -9
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 13.47
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -1678,16 +1349,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1743,25 +1404,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1770,13 +1421,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.74
+      propertyPath: m_LocalPosition.y
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.13
+      propertyPath: m_LocalPosition.z
+      value: 2.74
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1788,28 +1439,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 17.79
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2107932189189247837, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
 --- !u!4 &4251673954607395827 stripped
 Transform:
@@ -1824,11 +1454,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1837,7 +1462,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 104.98
+      value: 104.547
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -1884,60 +1509,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (8)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.7
+      value: -16.11
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8
+      value: 6.58
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.6
+      value: -1.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 21.48
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -1954,11 +1554,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (13)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1967,7 +1562,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 116.57
+      value: 116.215
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2014,25 +1609,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (13)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2041,38 +1621,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -5.95
+      propertyPath: m_LocalPosition.y
+      value: -2.06
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.06
+      propertyPath: m_LocalPosition.z
+      value: -5.95
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6
+      value: -6.71
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 19
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 15.42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2089,11 +1654,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (19)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2102,7 +1662,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 113.24
+      value: 112.99
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2149,35 +1709,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (19)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.95
+      value: 3.01
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 25.97
+      value: 26.06
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2188,21 +1733,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 10.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2219,11 +1749,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2279,25 +1804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2306,13 +1816,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 14.08
+      propertyPath: m_LocalPosition.y
+      value: -0.68
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.68
+      propertyPath: m_LocalPosition.z
+      value: 14.08
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2321,28 +1831,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 17.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.12
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      propertyPath: m_LocalPosition.z
+      value: 17.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2359,11 +1854,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2419,35 +1909,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (11)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18.27
+      value: -14.77
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33.56
+      value: 27.38
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2458,21 +1933,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 8.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2489,11 +1949,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2549,25 +2004,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (7)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2589,21 +2029,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 13.68
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
 --- !u!4 &4251673953256377281 stripped
@@ -2619,11 +2044,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2679,60 +2099,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (10)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26
+      value: -14.08
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.7
+      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.3
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 22.64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2749,11 +2139,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (14)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2762,7 +2147,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 112.02
+      value: 111.463
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2809,25 +2194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (14)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2842,27 +2212,17 @@ PrefabInstance:
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 16.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -2879,11 +2239,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2939,25 +2294,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (3)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2966,13 +2306,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.1
+      propertyPath: m_LocalPosition.y
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.1
+      propertyPath: m_LocalPosition.z
+      value: 12.1
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -2981,28 +2321,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.23
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.48
       objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      propertyPath: m_LocalPosition.z
+      value: 10.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -3019,11 +2344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099369992441131}
     m_Modifications:
-    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia 2 puntos (18)
-      objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3032,7 +2352,7 @@ PrefabInstance:
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 113.66
+      value: 113.18
       objectReference: {fileID: 0}
     - target: {fileID: 7849389466422915626, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
@@ -3079,60 +2399,35 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243782, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+    - target: {fileID: 3538992910418810532, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466861243785, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940524, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398827466189940527, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia 2 puntos (18)
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.91
+      value: -10.77
       objectReference: {fileID: 0}
     - target: {fileID: 1398827465792585422, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.68
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.63
+      value: -2.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.38
       objectReference: {fileID: 0}
     - target: {fileID: 1398827466941079494, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.66
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247839, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247807, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2107932189189247806, guid: 5f4c19a87166b0f48be4aea74c5f74c2,
-        type: 3}
-      propertyPath: m_Target
-      value: 
+      value: 23.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4c19a87166b0f48be4aea74c5f74c2, type: 3}
@@ -3149,11 +2444,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6336099370910541018}
     m_Modifications:
-    - target: {fileID: 4736326828331291373, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Name
-      value: Guardia quietp
-      objectReference: {fileID: 0}
     - target: {fileID: 2038289271464523363, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3209,40 +2499,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7919358129631516438, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
+    - target: {fileID: 4736326828331291373, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
         type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919358129631516534, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7919358129631516535, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7191814580189243855, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7191814580189243840, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7191814579519415141, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7191814579519415142, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
+      propertyPath: m_Name
+      value: Guardia quietp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b1c1d3b7ad372c44bcc0d37b6addda1, type: 3}
