@@ -6,17 +6,20 @@ public class Player : MonoBehaviour
 {
     public float maxSpeed;
     float speed;
+
     public Transform camara;
     public Transform centroCamara;
     public Transform modelo;
+
     public Vector2 input;
     public Vector3 direc;
+    public Transform Enemy;
     
     Animator anim;
-
     float contador;
 
     public bool grounded;
+    public bool detectado;
     private Vector3 posCur;
     private Vector3 turnVector;
     private Quaternion rotCur;
@@ -36,22 +39,20 @@ public class Player : MonoBehaviour
         Rotation();
         if(input.sqrMagnitude != 0)
             DetectFloor();
+        if(detectado)
+            LookAtEnemy();
+    }
+
+    void LookAtEnemy()
+    {
+        transform.GetChild(1).LookAt(Enemy);
+        transform.GetChild(1).localEulerAngles = new Vector3(0, transform.GetChild(1).localEulerAngles.y, 0);
+        anim.SetBool("sentar", true);
+
     }
 
     public void DetectFloor()
     {
-        /*
-        RaycastHit hit;
-        Vector3 theRay = Vector3.down;
-
-
-        Debug.DrawRay(centroCamara.position, theRay, Color.red);
-        if (Physics.Raycast(centroCamara.position, theRay, out hit))
-        {
-            transform.rotation = Quaternion.Slerp(Quaternion.Euler(transform.up), Quaternion.Euler(hit.normal), Time.deltaTime * interpolateSpeed);
-            transform.localPosition = new Vector3(transform.localPosition.x, hit.point.y + 0.2f, transform.localPosition.z);
-        }*/
-
         Ray ray = new Ray(transform.position, -transform.up);
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit, 1.5f) == true)
@@ -95,6 +96,7 @@ public class Player : MonoBehaviour
         else
             GetComponent<Rigidbody>().useGravity = true;
     }
+
     private void LateUpdate()
     {
         UpdateAnimations();
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
     public void Movement()
     {
 
-        if (!Aullando() || !Saltando())
+        if (canMove())
         {
             direc = new Vector3(modelo.localEulerAngles.x, centroCamara.localEulerAngles.y, modelo.localEulerAngles.z);
             input = new Vector2(Input.GetAxis("Vertical"), Input.GetAxis("Horizontal"));
@@ -116,6 +118,14 @@ public class Player : MonoBehaviour
 
         transform.Translate(input.x * speed * Time.deltaTime * camara.forward);
         transform.Translate(input.y * speed * Time.deltaTime * camara.right);
+    }
+
+    public bool canMove()
+    {
+        if (Aullando() || Saltando() || detectado)
+            return false;
+
+        return true;
     }
 
     public void Rotation()
