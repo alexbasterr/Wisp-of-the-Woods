@@ -23,13 +23,14 @@ public class Player : MonoBehaviour
     private Vector3 posCur;
     private Vector3 turnVector;
     private Quaternion rotCur;
+            
 
     private void Awake()
     {
         speed = maxSpeed;
         anim = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.visible = false;                
     }
 
     private void Update()
@@ -163,9 +164,9 @@ public class Player : MonoBehaviour
             speed = 0;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !Saltando())
-        {
-            anim.SetTrigger("saltar");
+        if ( Input.GetKeyDown(KeyCode.Space) && !Saltando())
+        {            
+                anim.SetTrigger("saltar");
 
             if (input.sqrMagnitude == 0)
                 speed = 0;
