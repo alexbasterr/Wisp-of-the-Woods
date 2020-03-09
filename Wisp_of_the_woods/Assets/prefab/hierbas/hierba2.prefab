@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6237969289476459259
+--- !u!1 &7179008070532746465
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1193064017562142986}
-  - component: {fileID: 4251978427633538169}
-  - component: {fileID: 1612866170839956836}
+  - component: {fileID: 2720122146668515088}
+  - component: {fileID: 1023234189773148771}
+  - component: {fileID: 2545449638490995582}
   m_Layer: 0
   m_Name: hierba2
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1193064017562142986
+--- !u!4 &2720122146668515088
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6237969289476459259}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3785012, y: -2.23, z: -0.06}
-  m_LocalScale: {x: 0.56768996, y: 0.56768996, z: 0.56768996}
+  m_GameObject: {fileID: 7179008070532746465}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -128.6249, y: 91.00897, z: 225.19348}
+  m_LocalScale: {x: 0.28952187, y: 0.28952187, z: 0.28952187}
   m_Children: []
-  m_Father: {fileID: 5429813853635482061}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4251978427633538169
+--- !u!33 &1023234189773148771
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6237969289476459259}
+  m_GameObject: {fileID: 7179008070532746465}
   m_Mesh: {fileID: 8753438713482400518, guid: da6a7a91e7e999d4a864d9bdddaf4ac7, type: 3}
---- !u!23 &1612866170839956836
+--- !u!23 &2545449638490995582
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6237969289476459259}
+  m_GameObject: {fileID: 7179008070532746465}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -78,34 +78,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1 &9007704165088420830
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5429813853635482061}
-  m_Layer: 0
-  m_Name: hierba2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5429813853635482061
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9007704165088420830}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -191.0036, y: 75.09, z: 147.47433}
-  m_LocalScale: {x: 0.51, y: 0.51, z: 0.51}
-  m_Children:
-  - {fileID: 1193064017562142986}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

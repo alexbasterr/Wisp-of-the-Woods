@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2183486783962089744
+--- !u!1 &661746562886246336
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,46 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7514432972712747736}
-  - component: {fileID: 7555999812955483158}
-  - component: {fileID: 2069976181857872542}
-  - component: {fileID: 8208397103666922451}
+  - component: {fileID: 5990974482160102882}
+  - component: {fileID: 7413787564925342975}
+  - component: {fileID: 6838103329647455336}
+  - component: {fileID: 4198807565339527409}
   m_Layer: 0
-  m_Name: arbusto22
+  m_Name: arbusto13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
   m_IsActive: 1
---- !u!4 &7514432972712747736
+--- !u!4 &5990974482160102882
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183486783962089744}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.470433, y: -0.10822986, z: 111.07989}
+  m_GameObject: {fileID: 661746562886246336}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 131.01427, y: 60.85, z: 350.1897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8374515830370132813}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7555999812955483158
+--- !u!33 &7413787564925342975
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183486783962089744}
-  m_Mesh: {fileID: 8204665073218165181, guid: e0996bbd83020e7429b0cebbe0bedd36, type: 3}
---- !u!23 &2069976181857872542
+  m_GameObject: {fileID: 661746562886246336}
+  m_Mesh: {fileID: -3040885700913148833, guid: 561f1f04883f9d145b06688525eb7693, type: 3}
+--- !u!23 &6838103329647455336
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183486783962089744}
+  m_GameObject: {fileID: 661746562886246336}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 6034957751646507721, guid: e0996bbd83020e7429b0cebbe0bedd36, type: 3}
+  - {fileID: 6034957751646507721, guid: 561f1f04883f9d145b06688525eb7693, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,48 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &8208397103666922451
+--- !u!136 &4198807565339527409
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2183486783962089744}
+  m_GameObject: {fileID: 661746562886246336}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 3.3880296
-  m_Height: 6.776059
+  m_Enabled: 1
+  m_Radius: 1.7758464
+  m_Height: 3.10003
   m_Direction: 1
-  m_Center: {x: 0.08029556, y: 0.9796181, z: 0.014024258}
---- !u!1 &4783693754857820510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8374515830370132813}
-  m_Layer: 0
-  m_Name: arbusto2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8374515830370132813
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4783693754857820510}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -99.91035, y: 75.6658, z: 26.81372}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 7514432972712747736}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.51549375, y: 1.550015, z: -0.26488337}
