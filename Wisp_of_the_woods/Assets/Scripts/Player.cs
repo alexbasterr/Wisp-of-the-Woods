@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class Player : MonoBehaviour
 {
     public float maxSpeed;
@@ -14,7 +13,12 @@ public class Player : MonoBehaviour
     public Vector2 input;
     public Vector3 direc;
     public Transform Enemy;
-    
+    public Transform arbusto;
+    public Transform posicionInicialArbusto;
+    public Transform posicionInicial;
+    public bool entrandoArbusto;
+    public bool dentroArbusto;
+        
     Animator anim;
     float contador;
 
@@ -35,6 +39,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
+
         Contador();
         Movement();
         Rotation();
@@ -42,14 +47,72 @@ public class Player : MonoBehaviour
             DetectFloor();
         if(detectado)
             LookAtEnemy();
+        if(arbusto)
+            Esconderse();
+
+        if (dentroArbusto)
+            SalirArbusto();
+
+
     }
+
+    void SalirArbusto()
+    {
+        if (Input.GetButtonDown("Interactuar"))
+        {
+            transform.GetChild(1).localEulerAngles -= new Vector3(0, 180, 0);
+            if (entrandoArbusto && dentroArbusto)
+                StartCoroutine(salirArbusto(0.5f));
+        }
+    }
+    IEnumerator salirArbusto(float tiempo)
+    {
+        entrandoArbusto = false;
+        anim.SetTrigger("saltar");
+        Vector3 posicion = transform.GetChild(1).localPosition;
+        for (int i = 0; i <= 50; i++)
+        {
+            transform.GetChild(1).localPosition = new Vector3(Mathf.Lerp(posicion.x, 0, i * 0.02f), Mathf.Lerp(posicion.y, 0.163f, i * 0.02f), Mathf.Lerp(posicion.z, 0, i * 0.02f));
+            yield return new WaitForSeconds(tiempo * 0.02f);
+        }
+        dentroArbusto = false;
+        yield return null;
+    }
+
+    void Esconderse()
+    {
+        if(Input.GetButtonDown("Interactuar"))
+        {
+            transform.GetChild(1).LookAt(arbusto);
+            transform.GetChild(1).localEulerAngles = new Vector3(0, transform.GetChild(1).localEulerAngles.y, 0);
+            if (!entrandoArbusto && !dentroArbusto)
+                StartCoroutine(entrarArbusto(2));
+        }
+    }
+    
+
+    IEnumerator entrarArbusto(float tiempo)
+    {
+        entrandoArbusto = true;
+        posicionInicialArbusto = transform.GetChild(1).transform;
+        posicionInicial = transform.GetChild(1);
+        anim.SetTrigger("saltar");
+
+        for (int i = 0; i <= 50; i++)
+        {
+            transform.GetChild(1).position = new Vector3(Mathf.Lerp(posicionInicialArbusto.position.x, arbusto.position.x, i * 0.02f), Mathf.Lerp(posicionInicialArbusto.position.y, arbusto.position.y+1, i * 0.02f), Mathf.Lerp(posicionInicialArbusto.position.z, arbusto.position.z, i * 0.02f));
+            yield return new WaitForSeconds(tiempo * 0.02f);
+        }
+        dentroArbusto = true;
+        yield return null;
+    }
+
 
     void LookAtEnemy()
     {
         transform.GetChild(1).LookAt(Enemy);
         transform.GetChild(1).localEulerAngles = new Vector3(0, transform.GetChild(1).localEulerAngles.y, 0);
         anim.SetBool("sentar", true);
-
     }
 
     public void DetectFloor()
@@ -123,7 +186,7 @@ public class Player : MonoBehaviour
 
     public bool canMove()
     {
-        if (Aullando() || Saltando() || detectado)
+        if (Aullando() || Saltando() || detectado || dentroArbusto)
             return false;
 
         return true;
@@ -158,7 +221,7 @@ public class Player : MonoBehaviour
 
     public void UpdateAnimations()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !Aullando())
+        if (Input.GetKeyDown(KeyCode.E) && !Aullando())
         {
             anim.SetTrigger("aullar");
             speed = 0;

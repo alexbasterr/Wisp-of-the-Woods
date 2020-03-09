@@ -10,19 +10,20 @@ public class Esconderse : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
 
-        if (other.tag.Equals("Player"))
+        if (other.tag  == "Player")
         {
-            entradaOn = true;            
+            entradaOn = true;      
+            other.gameObject.GetComponent<Player>().arbusto = this.transform;      
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
 
-        if (other.tag == ("Player"))
+        if (other.tag == "Player")
         {
             entradaOn = false;
+            other.gameObject.GetComponent<Player>().arbusto = null;      
         }
     }
-
 }
