@@ -12,6 +12,8 @@ TagManager:
   - Fire
   - Aullar
   - Arbusto
+  - arbol
+  - Decoracion
   layers:
   - Default
   - TransparentFX

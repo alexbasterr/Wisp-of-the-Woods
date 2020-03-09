@@ -10,9 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1899983401510030608}
   - component: {fileID: 8730541898402167875}
+  - component: {fileID: 2107406580}
+  - component: {fileID: 2107406577}
   m_Layer: 0
   m_Name: Arbusto_esconderse
-  m_TagString: Untagged
+  m_TagString: Arbusto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,8 +45,34 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2.2198174
+  m_Radius: 1.8801353
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &2107406580
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518433358143388984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2506356, y: 3.2053423, z: 1.4663801}
+  m_Center: {x: -0.03980136, y: 1.1026711, z: 0.037748814}
+--- !u!114 &2107406577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518433358143388984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 055104453d0fddb4b81eea406d69b901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entradaOn: 0
 --- !u!1001 &9008694524516389783
 PrefabInstance:
   m_ObjectHideFlags: 0
