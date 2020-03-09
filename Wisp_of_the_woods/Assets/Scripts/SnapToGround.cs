@@ -40,7 +40,7 @@ public class SnapToGround : MonoBehaviour
         }
         RaycastHit hit;
 
-        if(Physics.Raycast(ray, out hit,groundLayers))
+        if(Physics.Raycast(ray, out hit,Mathf.Infinity,groundLayers))
         {
             child.position = hit.point-new Vector3(0,0.1f,0);
         }
