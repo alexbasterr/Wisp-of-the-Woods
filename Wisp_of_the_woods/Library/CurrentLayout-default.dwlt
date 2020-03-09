@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 544}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 1
-  controlID: 136
+  controlID: 141
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 137
+  controlID: 142
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 494}
   m_MaxSize: {x: 10002, y: 14044}
   vertical: 1
-  controlID: 67
+  controlID: 94
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 222}
   m_MaxSize: {x: 8006, y: 4022}
   vertical: 0
-  controlID: 68
+  controlID: 70
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -350,7 +350,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -410,24 +410,24 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 20817}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: a0dcf9ff96fff9ffa868fbffaa68fbffb068fbff6871fbff6c71fbff5edafbfff2dafeffd2e1feff24edfeff12effeff9af3feff16f9feff0205ffff220fffff2e12ffff6c1fffff6e1fffff6a29ffff8e2cffff583bffff5e3fffff623fffff4e41ffff3c46ffff9e4effffc050ffff9a56ffff9c5affff3865ffff5065ffff2e75ffff1482ffffa28dffffb48dffff0a96ffff5a9cffffc29fffffb8a6ffff90aeffff7cafffffacbcffff24beffffa8d2ffff2e98000004a50000b0a6000062b100005ab30000bcba0000b8c300009ad20000c8d20000d0d20000
+      scrollPos: {x: 0, y: 1744}
+      m_SelectedIDs: c056fdff
+      m_LastClickedID: -174400
+      m_ExpandedIDs: 3a56ffff3e56ffff02cdffff1acdffff68fbffff9a6f0000607e00002e890000348b0000348c00008a920000c09b00002aa8000002ab000030ab000038ab0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GameObject
-        m_OriginalName: GameObject
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 91566
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 9}
       m_SearchString: 
@@ -473,9 +473,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 99.30107, y: 29.015198, z: -315.1714}
+    m_Target: {x: 327.88416, y: 57.24138, z: -153.29514}
     speed: 2
-    m_Value: {x: 99.30107, y: 29.015198, z: -315.1714}
+    m_Value: {x: 327.88416, y: 57.24138, z: -153.29514}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +504,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.0012898842, y: -0.9617926, z: 0.2758444, w: 0.00018198563}
+    m_Target: {x: 0.29696655, y: 0.3289555, z: -0.11213104, w: 0.89009666}
     speed: 2
-    m_Value: {x: 0.0008756187, y: -0.96124554, z: 0.27568936, w: -0.001259987}
+    m_Value: {x: 0.29277694, y: 0.32925272, z: -0.110577464, w: 0.89086866}
   m_Size:
-    m_Target: 380.3409
+    m_Target: 10.680489
     speed: 2
-    m_Value: 363.9626
+    m_Value: 10.680489
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,20 +601,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefab/arboles
+    - Assets/descargado
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefab/arboles
+  - Assets/descargado
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\wisp of the woods\Wisp-of-the-Woods\Wisp_of_the_woods
+  m_LastProjectPath: C:\proyecto\Wisp-of-the-Woods\Wisp_of_the_woods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 207}
-    m_SelectedIDs: 928b0000
-    m_LastClickedID: 35730
-    m_ExpandedIDs: 000000000c6400002c6c0000746d0000306f00007e71000080710000367500002a7700004a780000707800009c7b0000cc8000002a810000ac83000082860000f88800004089000088890000468a0000a4dc0000a6dc0000a8dc0000aadc0000acdc0000aedc0000b0dc0000b2dc0000b4dc0000b6dc0000b8dc0000badc0000bcdc0000bedc0000c0dc0000c2dc0000c4dc0000c6dc0000c8dc0000cadc0000ccdc0000cedc000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: a0540000
+    m_LastClickedID: 21664
+    m_ExpandedIDs: 00000000f03e0000de40000036420000264400008c4600008e4600006e4a0000984c0000c44d0000ea4d000056510000a05600000e57000098590000805c00008e5e0000fe5e0000465f00008e5f00004c60000044620000dcb50000deb50000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000eeb50000f0b50000f2b50000f4b50000f6b50000f8b50000fab50000fcb50000feb5000000b6000002b6000004b6000006b6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c6400002c6c0000746d0000306f00007e71000080710000367500002a7700004a780000707800009c7b0000cc8000002a810000ac8300008286000088880000f88800004089000088890000468a0000248c0000a4dc0000a6dc0000a8dc0000aadc0000acdc0000aedc0000b0dc0000b2dc0000b4dc0000b6dc0000b8dc0000badc0000bcdc0000bedc0000c0dc0000c2dc0000c4dc0000c6dc0000c8dc0000cadc0000ccdc0000cedc0000
+    m_ExpandedIDs: 00000000f03e0000de40000036420000264400008c4600008e4600006e4a0000984c0000c44d0000ea4d000056510000a05600000e57000098590000805c00008e5e0000fe5e0000465f00008e5f00004c60000044620000dcb50000deb50000e0b50000e2b50000e4b50000e6b50000e8b50000eab50000ecb50000eeb50000f0b50000f2b50000f4b50000f6b50000f8b50000fab50000fcb50000feb5000000b6000002b6000004b6000006b60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000fa3a000048614200303d0000183e0000184d0000dc3b000068f200006298000058910000465000006c610000b2680000224201000a7a0100664f0800a897000072590000801b15007a500000ce680d00c4c3000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
