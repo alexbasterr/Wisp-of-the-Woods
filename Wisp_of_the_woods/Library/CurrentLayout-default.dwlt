@@ -113,7 +113,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 1
-  controlID: 141
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 494}
   m_MaxSize: {x: 14004, y: 14044}
   vertical: 0
-  controlID: 142
+  controlID: 143
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -410,10 +410,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 30961}
-      m_SelectedIDs: 02a90000
-      m_LastClickedID: 43266
-      m_ExpandedIDs: f454fdffd6e5fdffd608feff68fbffffb66f0000628c0000ca920000f499000072a8000080ab0000
+      scrollPos: {x: 0, y: 1}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 68fbffff70700000928e00004695000044ac000082af0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -473,9 +473,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 249.36417, y: 51.795464, z: -183.88664}
+    m_Target: {x: 322.6415, y: 43.373474, z: -113.30957}
     speed: 2
-    m_Value: {x: 249.36417, y: 51.795464, z: -183.88664}
+    m_Value: {x: 322.6415, y: 43.373474, z: -113.30957}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -504,13 +504,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.15143447, y: 0.78202355, z: -0.2023394, w: -0.57092613}
+    m_Target: {x: -0.19570942, y: 0.34724507, z: -0.06892237, w: -0.91530776}
     speed: 2
-    m_Value: {x: -0.15223761, y: 0.778905, z: -0.2015158, w: -0.57404035}
+    m_Value: {x: -0.19536313, y: 0.34974122, z: -0.06945989, w: -0.91361356}
   m_Size:
-    m_Target: 563.8247
+    m_Target: 242.3298
     speed: 2
-    m_Value: 539.54517
+    m_Value: 231.89455
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,20 +601,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/prefab/flores, setas
+    - Assets/prefab/PlantasDeAgua
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/prefab/flores, setas
+  - Assets/prefab/PlantasDeAgua
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\proyecto\Wisp-of-the-Woods\Wisp_of_the_woods
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 191}
-    m_SelectedIDs: 88430100
-    m_LastClickedID: 82824
-    m_ExpandedIDs: 00000000f03e0000de40000036420000264400008c4600008e4600006e4a0000984c0000c44d000056510000a05600000e57000098590000805c0000fe5e0000465f00008e5f00004c60000028b600002ab600002cb600002eb6000030b6000032b6000034b6000036b6000038b600003ab600003cb600003eb6000040b6000042b6000044b6000046b6000048b600004ab600004cb600004eb6000050b6000052b6000000ca9a3b
+    scrollPos: {x: 0, y: 119}
+    m_SelectedIDs: 34bd0000
+    m_LastClickedID: 48436
+    m_ExpandedIDs: 00000000f63e0000e44000003c4200002e4400009646000098460000784a0000ce4d000062510000c05600002e570000b8590000a05c00001e5f0000665f0000b05f00006e6000005abb00005cbb00005ebb000060bb000062bb000064bb000066bb000068bb00006abb00006cbb00006ebb000070bb000072bb000074bb000076bb000078bb00007abb00007cbb00007ebb000080bb000082bb000084bb000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f03e0000de40000036420000264400008c4600008e4600006e4a0000984c0000c44d0000ea4d000056510000a05600000e57000098590000805c00008e5e0000fe5e0000465f00008e5f00004c6000004462000028b600002ab600002cb600002eb6000030b6000032b6000034b6000036b6000038b600003ab600003cb600003eb6000040b6000042b6000044b6000046b6000048b600004ab600004cb600004eb6000050b6000052b60000
+    m_ExpandedIDs: 00000000f63e0000e44000003c4200002e4400009646000098460000784a0000a24c0000ce4d000062510000c05600002e570000b8590000a05c00001e5f0000665f0000b05f00006e6000005abb00005cbb00005ebb000060bb000062bb000064bb000066bb000068bb00006abb00006cbb00006ebb000070bb000072bb000074bb000076bb000078bb00007abb00007cbb00007ebb000080bb000082bb000084bb0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
