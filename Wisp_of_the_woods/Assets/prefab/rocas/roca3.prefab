@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7739340586413336950}
   - component: {fileID: 4060874851553236367}
   - component: {fileID: 1135686111602923384}
-  m_Layer: 0
-  m_Name: 7
+  m_Layer: 10
+  m_Name: roca3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
