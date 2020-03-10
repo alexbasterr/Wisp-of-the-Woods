@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2728616320378658945}
   - component: {fileID: 9003506427600927986}
   m_Layer: 0
-  m_Name: arbusto14
-  m_TagString: Untagged
+  m_Name: arbusto3
+  m_TagString: Decoracion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
