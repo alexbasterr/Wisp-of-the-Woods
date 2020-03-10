@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5129314646994851341}
   m_Layer: 0
   m_Name: Arbol1_modelo
-  m_TagString: Untagged
+  m_TagString: arbol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +87,7 @@ Transform:
   m_GameObject: {fileID: 2305744497743776100}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -106.73467, y: 0, z: -125.4}
-  m_LocalScale: {x: 0.66162, y: 0.66162, z: 0.66162}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children:
   - {fileID: 3688957069045710994}
   m_Father: {fileID: 0}
