@@ -5,7 +5,6 @@ using UnityEngine;
 public class Esconderse : MonoBehaviour
 {
     public bool entradaOn;
-    
         
     private void OnTriggerEnter(Collider other)
     {
@@ -25,5 +24,10 @@ public class Esconderse : MonoBehaviour
             entradaOn = false;
             other.gameObject.GetComponent<Player>().arbusto = null;      
         }
+    }
+
+    public void ActivarAnimacion()
+    {
+        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Activar");
     }
 }

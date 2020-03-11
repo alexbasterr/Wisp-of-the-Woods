@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7907959728286840601}
   - component: {fileID: 5658328664234761920}
   m_Layer: 0
-  m_Name: 4
-  m_TagString: Untagged
+  m_Name: roca
+  m_TagString: Decoracion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

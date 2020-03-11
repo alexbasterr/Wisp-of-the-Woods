@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6031138140052073715}
   m_Layer: 0
   m_Name: "piedra4_peque\xF1a"
-  m_TagString: Untagged
+  m_TagString: Decoracion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8

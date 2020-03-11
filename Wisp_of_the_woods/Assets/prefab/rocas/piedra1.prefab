@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 1986757541661343373}
   - component: {fileID: 1958396046467478679}
   m_Layer: 0
-  m_Name: 3
-  m_TagString: Untagged
+  m_Name: piedra1
+  m_TagString: Decoracion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 1
   m_StaticEditorFlags: 8
