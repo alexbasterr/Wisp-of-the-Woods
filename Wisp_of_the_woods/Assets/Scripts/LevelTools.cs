@@ -29,8 +29,4 @@ public class LevelTools : MonoBehaviour
     [Header("SCALE")]
     public float minScale = 0.65f;
     public float maxScale = 0.8f;
-
-    
-
-
 }

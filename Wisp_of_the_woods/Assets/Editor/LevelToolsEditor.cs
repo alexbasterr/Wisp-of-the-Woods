@@ -7,6 +7,7 @@ using UnityEditor;
 public class LevelToolsEditor : Editor
 {
     GameObject padre;
+    string nombreGrupo = "Objetos anteriores";
 
     public override void OnInspectorGUI()
     {
@@ -36,13 +37,14 @@ public class LevelToolsEditor : Editor
 
     }
 
+    
+    
     public void Replace(LevelTools lt)
     {
-        if (!GameObject.Find("Objetos Anteriores"))
-        {
-            padre = new GameObject("Objetos Anteriores");
-            padre.transform.parent = lt.transform;
-        }
+        
+        padre = new GameObject(nombreGrupo);
+        padre.transform.parent = lt.transform;
+        
 
         foreach (GameObject child in GetChildsWithTag(lt))
         {
