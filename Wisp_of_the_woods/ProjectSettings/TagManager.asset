@@ -15,6 +15,7 @@ TagManager:
   - arbol
   - Decoracion
   - Cientifico
+  - Ramas
   layers:
   - Default
   - TransparentFX
