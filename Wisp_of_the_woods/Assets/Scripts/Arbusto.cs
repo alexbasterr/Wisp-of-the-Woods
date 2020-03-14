@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Esconderse : MonoBehaviour
+public class Arbusto : MonoBehaviour
 {
     public bool entradaOn;
         
@@ -12,7 +12,7 @@ public class Esconderse : MonoBehaviour
         if (other.tag  == "Player")
         {
             entradaOn = true;      
-            other.gameObject.GetComponent<Player>().arbusto = this.transform;      
+            other.gameObject.GetComponent<EsconderPlayer>().arbusto = gameObject;      
         }
     }
 
@@ -22,7 +22,7 @@ public class Esconderse : MonoBehaviour
         if (other.tag == "Player")
         {
             entradaOn = false;
-            other.gameObject.GetComponent<Player>().arbusto = null;      
+            other.gameObject.GetComponent<EsconderPlayer>().arbusto = null;      
         }
     }
 

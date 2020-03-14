@@ -68,7 +68,7 @@ public class Player : MonoBehaviour
     IEnumerator salirArbusto(float tiempo)
     {
         entrandoArbusto = false;
-        arbusto.GetComponent<Esconderse>().ActivarAnimacion();
+        arbusto.GetComponent<Arbusto>().ActivarAnimacion();
         anim.SetTrigger("saltar");
         Vector3 posicion = transform.GetChild(1).localPosition;
         for (int i = 0; i <= 50; i++)
@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
     IEnumerator entrarArbusto(float tiempo)
     {
         entrandoArbusto = true;
-        arbusto.GetComponent<Esconderse>().ActivarAnimacion();
+        arbusto.GetComponent<Arbusto>().ActivarAnimacion();
         posicionInicialArbusto = transform.GetChild(1).transform;
         posicionInicial = transform.GetChild(1);
         anim.SetTrigger("saltar");

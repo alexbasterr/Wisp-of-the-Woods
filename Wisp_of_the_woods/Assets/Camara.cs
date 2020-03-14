@@ -9,7 +9,13 @@ public class Camara : MonoBehaviour
     private float rotationY = 0f;
     private float rotationX = 0f;
 
-    private void Update()
+    void OnEnable()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    void Update()
     {
         rotationY += Input.GetAxis("Mouse Y") * Ysensitivity;
         rotationX += Input.GetAxis("Mouse X") * Xsensitivity;

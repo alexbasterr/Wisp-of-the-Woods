@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1899983401510030608}
   - component: {fileID: 8730541898402167875}
   - component: {fileID: 2107406580}
-  - component: {fileID: 2107406577}
+  - component: {fileID: 2691257728373849402}
   m_Layer: 0
   m_Name: Arbusto_esconderse
   m_TagString: Decoracion
@@ -60,7 +60,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2506356, y: 3.2053423, z: 1.4663801}
   m_Center: {x: -0.03980136, y: 1.1026711, z: 0.037748814}
---- !u!114 &2107406577
+--- !u!114 &2691257728373849402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
