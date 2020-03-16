@@ -5,14 +5,26 @@ using UnityEngine;
 public class PlayerCanvasController : MonoBehaviour
 {
 
+    public GameObject AullarCanvas;
+    public GameObject SaltoCanvas;
 
-    void ActivarAullar()
+    public void ActivarAullar()
     {
-
+        AullarCanvas.SetActive(true);
     }
 
-    void ActivarSalto()
+    public void ActivarSalto()
     {
+        SaltoCanvas.SetActive(true);
 
+    }
+    public void DesactivarAullar()
+    {
+        AullarCanvas.SetActive(false);
+    }
+
+    public void DesactivarSalto()
+    {
+        SaltoCanvas.SetActive(false);
     }
 }

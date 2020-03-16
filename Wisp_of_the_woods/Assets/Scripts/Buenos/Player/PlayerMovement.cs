@@ -9,9 +9,13 @@ public class PlayerMovement : MonoBehaviour
 
     //Movement
     public float maxSpeed;
-    float speed;
-    Vector2 mov;
     public Transform camara;
+    private float speed;
+    private Vector2 mov;
+
+    //Detectado
+    public bool detectado;
+    public Transform Enemy;
 
     private void Awake()
     {
@@ -23,6 +27,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (canMove())
             mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        else
+            mov = Vector2.zero;
     }
 
     private void FixedUpdate()
@@ -45,7 +51,10 @@ public class PlayerMovement : MonoBehaviour
 
     bool canMove()
     {
-        return true;
+        if (detectado || GetComponent<EsconderPlayer>().dentroArbusto)
+            return false;
+        else
+            return true;
     }
 
     void UpdateAnimations()

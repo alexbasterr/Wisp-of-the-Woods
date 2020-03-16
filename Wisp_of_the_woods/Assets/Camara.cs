@@ -6,8 +6,8 @@ public class Camara : MonoBehaviour
 {
     public float Ysensitivity;
     public float Xsensitivity;
-    private float rotationY = 0f;
-    private float rotationX = 0f;
+    public float rotationY = 0f;
+    public float rotationX = 0f;
 
     void OnEnable()
     {
@@ -22,6 +22,5 @@ public class Camara : MonoBehaviour
 
         rotationY = Mathf.Clamp(rotationY, -30, 0);
         transform.localEulerAngles = new Vector3(-rotationY, rotationX, transform.localEulerAngles.z);
-
     }
 }

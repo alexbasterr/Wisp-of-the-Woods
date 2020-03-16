@@ -11,9 +11,9 @@ public class DeteccionProximidad : MonoBehaviour
         if (other.tag == "Player")
         {
             playerEnRango = true;
-            player = FindObjectOfType<Player>().gameObject;
-            player.GetComponent<Player>().detectado = true;
-            player.GetComponent<Player>().Enemy = transform.parent;
+            player = FindObjectOfType<PlayerMovement>().gameObject;
+            player.GetComponent<PlayerMovement>().detectado = true;
+            player.GetComponent<PlayerMovement>().Enemy = transform.parent;
         }
     }
 }

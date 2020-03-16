@@ -112,6 +112,7 @@ public class Scientist : MonoBehaviour
 
     void Investigar()
     {
+        print("b");
         StartCoroutine(InvestigarRuido());
     }
 

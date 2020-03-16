@@ -12,7 +12,8 @@ public class Arbusto : MonoBehaviour
         if (other.tag  == "Player")
         {
             entradaOn = true;      
-            other.gameObject.GetComponent<EsconderPlayer>().arbusto = gameObject;      
+            other.gameObject.GetComponent<EsconderPlayer>().arbusto = gameObject;
+            other.gameObject.GetComponent<PlayerCanvasController>().ActivarSalto();
         }
     }
 
@@ -22,7 +23,8 @@ public class Arbusto : MonoBehaviour
         if (other.tag == "Player")
         {
             entradaOn = false;
-            other.gameObject.GetComponent<EsconderPlayer>().arbusto = null;      
+            other.gameObject.GetComponent<EsconderPlayer>().arbusto = null;
+            other.gameObject.GetComponent<PlayerCanvasController>().DesactivarSalto();
         }
     }
 

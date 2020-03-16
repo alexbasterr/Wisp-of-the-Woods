@@ -16,6 +16,7 @@ TagManager:
   - Decoracion
   - Cientifico
   - Ramas
+  - Suelo
   layers:
   - Default
   - TransparentFX

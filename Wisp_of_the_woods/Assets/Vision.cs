@@ -8,12 +8,12 @@ public class Vision : MonoBehaviour
     public GameObject player;
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Player")
+        if(other.tag == "Player" && !other.GetComponent<EsconderPlayer>().dentroArbusto)
         {
             playerEnRango = true;
-            player = other.transform.parent.gameObject;
-            player.GetComponent<Player>().detectado = true;
-            player.GetComponent<Player>().Enemy = transform.parent;
+            player = other.gameObject;
+            player.GetComponent<PlayerMovement>().detectado = true;
+            player.GetComponent<PlayerMovement>().Enemy = transform.parent;
         }
     }
 }

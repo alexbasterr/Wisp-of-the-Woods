@@ -15,8 +15,11 @@ public class AlignPlayer : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, -transform.up, out hit, 10))
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation, Time.deltaTime * 5);
-            transform.position = hit.point + transform.up * 0.17f;
+            if(hit.transform.gameObject.tag == "Suelo")
+            {
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation, Time.deltaTime * 5);
+                transform.position = hit.point + transform.up * 0.17f;
+            }
         }
     }
 
