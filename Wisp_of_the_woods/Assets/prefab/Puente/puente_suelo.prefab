@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6250627527753457312}
   - component: {fileID: 3163134568593810582}
   - component: {fileID: 8708060945265530991}
+  - component: {fileID: 5724793828432807886}
   m_Layer: 0
   m_Name: puente_suelo
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &5724793828432807886
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6982243285919280307}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.930674, y: 0.72156984, z: 30.95271}
+  m_Center: {x: 0, y: 0.36078492, z: 0.19818115}
