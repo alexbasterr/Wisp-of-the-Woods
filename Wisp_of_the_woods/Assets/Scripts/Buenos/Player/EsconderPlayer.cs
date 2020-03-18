@@ -34,10 +34,15 @@ public class EsconderPlayer : MonoBehaviour
                 }
             }
         }
+
+        if(noInteractuar && dentroArbusto)
+        {
+            modelo.position = Vector3.Lerp(transform.position, arbusto.transform.position, 2 * Time.deltaTime);
+        }
     }
     public void EntrarArbusto()
     {
-        GetComponent<Animator>().SetTrigger("saltar");
+
         Vector3 euler = modelo.localEulerAngles;
         modelo.LookAt(arbusto.transform);
         modelo.localEulerAngles = new Vector3(euler.x, modelo.localEulerAngles.y, euler.z);
@@ -50,7 +55,6 @@ public class EsconderPlayer : MonoBehaviour
 
     public void SalirArbusto()
     {
-        GetComponent<Animator>().SetTrigger("saltar");
         modelo.localEulerAngles -= new Vector3(0, 180, 0);
         camara.GetComponent<Camara>().rotationX -= 180;
         camara.localPosition = posicionCamara;
@@ -60,18 +64,24 @@ public class EsconderPlayer : MonoBehaviour
     IEnumerator CO_EntrarArbusto(float tiempo)
     {
         Transform a = modelo;
-        for (int i = 0; i <= 50; i++)
+        GetComponent<Animator>().SetTrigger("saltar");
+        dentroArbusto = true;
+
+        yield return new WaitForSeconds(2);
+        noInteractuar = false;
+
+        { /*for (int i = 0; i <= 50; i++)
         {
             modelo.position = new Vector3(Mathf.Lerp(a.position.x, arbusto.transform.position.x, i * 0.02f), Mathf.Lerp(a.position.y, arbusto.transform.position.y + 1, i * 0.02f), Mathf.Lerp(a.position.z, arbusto.transform.position.z, i * 0.02f));
-            yield return new WaitForSeconds(tiempo * 0.02f);
+            yield return new WaitorSeconds(tiempo * 0.02f);
+        }*/
         }
-        dentroArbusto = true;
-        noInteractuar = false;
     }
 
     IEnumerator CO_SalirArbusto(float tiempo)
     {
         Vector3 a = modelo.localPosition;
+        GetComponent<Animator>().SetTrigger("saltar");
         for (int i = 0; i <= 50; i++)
         {
             modelo.localPosition = new Vector3(Mathf.Lerp(a.x, posicionModelo.x, i * 0.02f), Mathf.Lerp(a.y, posicionModelo.y, i * 0.02f), Mathf.Lerp(a.z, posicionModelo.z, i * 0.02f));
