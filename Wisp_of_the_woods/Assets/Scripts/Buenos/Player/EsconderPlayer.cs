@@ -4,91 +4,117 @@ using UnityEngine;
 
 public class EsconderPlayer : MonoBehaviour
 {
+    public AnimationCurve curve;
     public GameObject arbusto;
-
-    public Transform camara;
-    public Transform modelo;
-
-    private Vector3 posicionModelo;
-    private Vector3 posicionCamara;
-
     public bool dentroArbusto;
 
-    private bool noInteractuar;
+    public bool noInteractuar;
+    float timer;
+    public bool moviendo;
 
+    public Vector3 position;
+    Vector3 rotation;
     private void Update()
     {
         if (arbusto)
         {
             if (!noInteractuar)
             {
-                if (Input.GetKeyDown(KeyCode.Space) && dentroArbusto)
+                if (Input.GetKeyDown(KeyCode.Space) && !moviendo && !dentroArbusto)
                 {
+                    GetComponent<CharacterController>().enabled = false;
+                    dentroArbusto = true;
+                    position = transform.position;
+                    GetComponent<Animator>().SetTrigger("saltar");
+                    moviendo = true;
                     noInteractuar = true;
-                    SalirArbusto();
+                    
+                    Vector3 lookPos = arbusto.transform.position - transform.position;
+                    lookPos.y = 0;
+                    transform.rotation = Quaternion.LookRotation(lookPos);
                 }
-                else if (Input.GetKeyDown(KeyCode.Space) && !dentroArbusto)
+                else if (Input.GetKeyDown(KeyCode.Space) && !moviendo && dentroArbusto)
                 {
+                    dentroArbusto = false;
+                    GetComponent<Animator>().SetTrigger("saltar");
+                    moviendo = true;
                     noInteractuar = true;
-                    EntrarArbusto();
+                    transform.eulerAngles = rotation - new Vector3(0, 180, 0);
                 }
             }
-        }
 
-        if(noInteractuar && dentroArbusto)
-        {
-            modelo.position = Vector3.Lerp(transform.position, arbusto.transform.position, 2 * Time.deltaTime);
+            
         }
     }
+
+
+    private void FixedUpdate()
+    {
+        if (moviendo)
+        {
+            if (dentroArbusto)
+                EntrarArbusto();
+            
+            if(!dentroArbusto)
+                SalirArbusto();
+        }
+    }
+
     public void EntrarArbusto()
     {
+        timer += Time.deltaTime;
+        if (timer >= 4)
+            timer = 4;
 
-        Vector3 euler = modelo.localEulerAngles;
-        modelo.LookAt(arbusto.transform);
-        modelo.localEulerAngles = new Vector3(euler.x, modelo.localEulerAngles.y, euler.z);
-        posicionModelo = modelo.localPosition;
-        posicionCamara = camara.localPosition;
-        camara.position = arbusto.transform.position;
-        modelo.GetComponent<CapsuleCollider>().enabled = false;
-        StartCoroutine(CO_EntrarArbusto(2));
+        rotation = transform.eulerAngles;
+
+        transform.position = Vector3.Lerp(transform.position, arbusto.transform.position + (Vector3.up *0.22f), curve.Evaluate(timer/4));
+
     }
-
     public void SalirArbusto()
     {
-        modelo.localEulerAngles -= new Vector3(0, 180, 0);
-        camara.GetComponent<Camara>().rotationX -= 180;
-        camara.localPosition = posicionCamara;
-        StartCoroutine(CO_SalirArbusto(1));
+        transform.GetChild(0).gameObject.SetActive(true);
+
+        timer += Time.deltaTime;
+        if (timer >= 4)
+            timer = 4;
+
+        transform.position = Vector3.Lerp(transform.position, position, curve.Evaluate(timer / 4));
     }
-
-    IEnumerator CO_EntrarArbusto(float tiempo)
+    public void FinAnimacion()
     {
-        Transform a = modelo;
-        GetComponent<Animator>().SetTrigger("saltar");
-        dentroArbusto = true;
-
-        yield return new WaitForSeconds(2);
-        noInteractuar = false;
-
-        { /*for (int i = 0; i <= 50; i++)
+        if (dentroArbusto)
         {
-            modelo.position = new Vector3(Mathf.Lerp(a.position.x, arbusto.transform.position.x, i * 0.02f), Mathf.Lerp(a.position.y, arbusto.transform.position.y + 1, i * 0.02f), Mathf.Lerp(a.position.z, arbusto.transform.position.z, i * 0.02f));
-            yield return new WaitorSeconds(tiempo * 0.02f);
-        }*/
+            moviendo = false;
+            noInteractuar = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            timer = 0;
+        }
+        else
+        {
+            moviendo = false;
+            noInteractuar = false;
+            GetComponent<CharacterController>().enabled = true;
+            timer = 0;
+            position = Vector3.zero;
         }
     }
 
-    IEnumerator CO_SalirArbusto(float tiempo)
+    public void ArbustoShakeEntrar()
     {
-        Vector3 a = modelo.localPosition;
-        GetComponent<Animator>().SetTrigger("saltar");
-        for (int i = 0; i <= 50; i++)
+        if(dentroArbusto)
         {
-            modelo.localPosition = new Vector3(Mathf.Lerp(a.x, posicionModelo.x, i * 0.02f), Mathf.Lerp(a.y, posicionModelo.y, i * 0.02f), Mathf.Lerp(a.z, posicionModelo.z, i * 0.02f));
-            yield return new WaitForSeconds(tiempo * 0.02f);
+            arbusto.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Activar");
+            print("a");
         }
-        dentroArbusto = false;
-        noInteractuar = false;
-        modelo.GetComponent<CapsuleCollider>().enabled = true;
     }
+    public void ArbustoShakeSalir()
+    {
+        if (!dentroArbusto)
+        {
+            arbusto.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Activar");
+            print("b");
+        }
+    }
+
 }

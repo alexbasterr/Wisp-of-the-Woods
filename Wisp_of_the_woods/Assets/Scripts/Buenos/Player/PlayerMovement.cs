@@ -4,49 +4,140 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Componentes
-    Animator anim;
+    public float Velocity;
+    [Space]
 
-    //Movement
-    public float maxSpeed;
-    public Transform camara;
-    private float speed;
-    private Vector2 mov;
+    public float InputX;
+    public float InputZ;
+    public Vector3 desiredMoveDirection;
+    public bool blockRotationPlayer;
+    public float desiredRotationSpeed = 0.1f;
+    public Animator anim;
+    public float Speed;
+    public float allowPlayerRotation = 0.1f;
+    public Camera cam;
+    public CharacterController controller;
+    public bool isGrounded;
 
+    [Header("Animation Smoothing")]
+    [Range(0, 1f)]
+    public float HorizontalAnimSmoothTime = 0.2f;
+    [Range(0, 1f)]
+    public float VerticalAnimTime = 0.2f;
+    [Range(0, 1f)]
+    public float StartAnimTime = 0.3f;
+    [Range(0, 1f)]
+    public float StopAnimTime = 0.15f;
+
+    public float verticalVel;
+    private Vector3 moveVector;
+
+
+    [Header("Detectado")]
     //Detectado
     public bool detectado;
     public Transform Enemy;
 
-    private void Awake()
+    [Header("Orientar")]
+    //Orientar
+    public LayerMask layer;
+    Transform player;
+
+    void Start()
     {
-        anim = GetComponent<Animator>();
-        speed = maxSpeed;
+        anim = this.GetComponent<Animator>();
+        cam = Camera.main;
+        controller = this.GetComponent<CharacterController>();
+        player = transform.GetChild(0);
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        if (canMove())
-            mov = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        InputMagnitude();
+
+        isGrounded = controller.isGrounded;
+        if (isGrounded)
+        {
+            verticalVel -= 0;
+        }
         else
-            mov = Vector2.zero;
+        {
+            verticalVel -= 1;
+        }
+        moveVector = new Vector3(0, verticalVel * .2f * Time.deltaTime, 0);
+        controller.Move(moveVector);
+
+
     }
 
     private void FixedUpdate()
     {
-        if (canMove() && mov.magnitude != 0)
-            Movement();
+        if (canMove())
+        {
+            AllignPlayer();
+        }
     }
 
-    private void LateUpdate()
+    public void AllignPlayer()
     {
-        UpdateAnimations();
+        Ray ray = new Ray(transform.position, -transform.up);
+        RaycastHit hit;
+
+        if(Physics.Raycast(ray,out hit, layer))
+        {
+            Quaternion targetRotation = Quaternion.FromToRotation(player.up, hit.normal) * player.rotation;
+            player.rotation = Quaternion.Slerp(player.rotation, targetRotation, 50 * Time.deltaTime);
+        }
+        player.localEulerAngles = new Vector3(player.localEulerAngles.x, 0, player.localEulerAngles.z);
     }
 
-    void Movement()
+    void PlayerMoveAndRotation()
     {
-        transform.GetChild(1).transform.forward = camara.forward;
-        transform.Translate(mov.y * speed * Time.deltaTime * camara.forward);
-        transform.Translate(mov.x * speed * Time.deltaTime * camara.right);
+        InputX = Input.GetAxis("Horizontal");
+        InputZ = Input.GetAxis("Vertical");
+
+        var camera = Camera.main;
+        var forward = cam.transform.forward;
+        var right = cam.transform.right;
+
+        forward.y = 0f;
+        right.y = 0f;
+
+        forward.Normalize();
+        right.Normalize();
+
+        desiredMoveDirection = forward * InputZ + right * InputX;
+
+        if (blockRotationPlayer == false)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(desiredMoveDirection), desiredRotationSpeed);
+            controller.Move(desiredMoveDirection * Time.deltaTime * Velocity);
+        }
+    }
+
+    void InputMagnitude()
+    {
+        //Calculate Input Vectors
+        InputX = Input.GetAxis("Horizontal");
+        InputZ = Input.GetAxis("Vertical");
+
+        //Calculate the Input Magnitude
+        Speed = new Vector2(InputX, InputZ).sqrMagnitude;
+
+        //Physically move player
+        if (canMove())
+        {
+            if (Speed > allowPlayerRotation)
+            {
+                anim.SetFloat("Mov", Speed, StartAnimTime, Time.deltaTime);
+                PlayerMoveAndRotation();
+            }
+            else if (Speed < allowPlayerRotation)
+            {
+                anim.SetFloat("Mov", Speed, StopAnimTime, Time.deltaTime);
+            }
+        }
     }
 
     bool canMove()
@@ -56,13 +147,4 @@ public class PlayerMovement : MonoBehaviour
         else
             return true;
     }
-
-    void UpdateAnimations()
-    {
-        if (mov.sqrMagnitude != 0)
-            anim.SetBool("andar", true);
-        else
-            anim.SetBool("andar", false);
-    }
-    
 }
