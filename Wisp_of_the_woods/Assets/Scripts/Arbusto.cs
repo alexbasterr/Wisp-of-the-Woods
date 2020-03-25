@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arbusto : MonoBehaviour
 {
-    public bool entradaOn;
+    bool entradaOn;
         
     private void OnTriggerEnter(Collider other)
     {

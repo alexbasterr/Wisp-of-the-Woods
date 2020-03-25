@@ -8,20 +8,13 @@ public class DeteccionSonido : MonoBehaviour
     public bool haOido;
     public Transform player;
 
-    private void Update()
-    {
-        if(puedeOir && Input.GetKeyDown(KeyCode.F))
-        {
-            print("a");
-            haOido = true;
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
             player = FindObjectOfType<PlayerMovement>().transform;
+            player.GetComponent<AullarPlayer>().puedeAullar = true;
+            player.GetComponent<AullarPlayer>().enemigo = this;
             puedeOir = true;
         }
     }
@@ -31,6 +24,8 @@ public class DeteccionSonido : MonoBehaviour
         if (other.tag == "Player")
         {
             puedeOir = false;
+            player.GetComponent<AullarPlayer>().puedeAullar = false;
+            player.GetComponent<AullarPlayer>().enemigo = null;
             player = null;
         }
     }

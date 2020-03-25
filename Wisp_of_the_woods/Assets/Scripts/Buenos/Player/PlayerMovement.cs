@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Velocity;
     [Space]
 
+
     public float InputX;
     public float InputZ;
     public Vector3 desiredMoveDirection;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera cam;
     public CharacterController controller;
     public bool isGrounded;
+    public bool canMove;
 
     [Header("Animation Smoothing")]
     [Range(0, 1f)]
@@ -54,29 +56,31 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InputMagnitude();
-
-        isGrounded = controller.isGrounded;
-        if (isGrounded)
+        if (canMove)
         {
-            verticalVel -= 0;
+            InputMagnitude();
+            isGrounded = controller.isGrounded;
+            if (isGrounded)
+            {
+                verticalVel -= 0;
+            }
+            else
+            {
+                verticalVel -= 1;
+            }
+            moveVector = new Vector3(0, verticalVel * .2f * Time.deltaTime, 0);
+            controller.Move(moveVector);
         }
         else
         {
-            verticalVel -= 1;
+            anim.SetFloat("Mov", 0, StopAnimTime, Time.deltaTime);
         }
-        moveVector = new Vector3(0, verticalVel * .2f * Time.deltaTime, 0);
-        controller.Move(moveVector);
-
-
     }
 
     private void FixedUpdate()
     {
-        if (canMove())
-        {
+        if (canMove)
             AllignPlayer();
-        }
     }
 
     public void AllignPlayer()
@@ -126,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
         Speed = new Vector2(InputX, InputZ).sqrMagnitude;
 
         //Physically move player
-        if (canMove())
+        if (canMove)
         {
             if (Speed > allowPlayerRotation)
             {
@@ -140,11 +144,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    bool canMove()
+    public void CanMove()
     {
-        if (detectado || GetComponent<EsconderPlayer>().dentroArbusto)
-            return false;
-        else
-            return true;
+        canMove = !canMove;
     }
 }

@@ -69,6 +69,7 @@ public class Scientist : MonoBehaviour
         else
             PlayerVisto();
     }
+
     public void DetectFloor()
     {
         Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z) /*+ transform.forward / 2*/, -transform.up);
@@ -112,7 +113,6 @@ public class Scientist : MonoBehaviour
 
     void Investigar()
     {
-        print("b");
         StartCoroutine(InvestigarRuido());
     }
 

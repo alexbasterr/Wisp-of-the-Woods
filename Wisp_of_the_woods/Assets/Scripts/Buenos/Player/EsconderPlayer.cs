@@ -14,15 +14,18 @@ public class EsconderPlayer : MonoBehaviour
 
     public Vector3 position;
     Vector3 rotation;
+    BoxCollider arbustoCollider;
     private void Update()
     {
         if (arbusto)
         {
             if (!noInteractuar)
             {
-                if (Input.GetKeyDown(KeyCode.Space) && !moviendo && !dentroArbusto)
+                if (Input.GetButtonDown("Jump") && !moviendo && !dentroArbusto)
                 {
-                    GetComponent<CharacterController>().enabled = false;
+                    GetComponent<PlayerMovement>().CanMove();
+                    arbustoCollider = arbusto.GetComponent<BoxCollider>();
+                    arbustoCollider.enabled = false;
                     dentroArbusto = true;
                     position = transform.position;
                     GetComponent<Animator>().SetTrigger("saltar");
@@ -33,21 +36,22 @@ public class EsconderPlayer : MonoBehaviour
                     lookPos.y = 0;
                     transform.rotation = Quaternion.LookRotation(lookPos);
                 }
-                else if (Input.GetKeyDown(KeyCode.Space) && !moviendo && dentroArbusto)
+                else if (Input.GetButtonDown("Jump") && !moviendo && dentroArbusto)
                 {
                     dentroArbusto = false;
+                    position = arbusto.transform.GetChild(1).GetChild(0).position + transform.forward;
+
+                    Vector3 lookPos = position - transform.position;
+                    lookPos.y = 0;
+                    transform.rotation = Quaternion.LookRotation(lookPos);
+
                     GetComponent<Animator>().SetTrigger("saltar");
                     moviendo = true;
                     noInteractuar = true;
-                    transform.eulerAngles = rotation - new Vector3(0, 180, 0);
                 }
             }
-
-            
         }
     }
-
-
     private void FixedUpdate()
     {
         if (moviendo)
@@ -57,6 +61,12 @@ public class EsconderPlayer : MonoBehaviour
             
             if(!dentroArbusto)
                 SalirArbusto();
+        }
+
+        if(arbusto && dentroArbusto)
+        {
+            arbusto.transform.GetChild(1).rotation = Quaternion.LookRotation(Camera.main.transform.forward, arbusto.transform.up);
+            arbusto.transform.GetChild(1).localEulerAngles = new Vector3(0, arbusto.transform.GetChild(1).localEulerAngles.y, 0);
         }
     }
 
@@ -94,9 +104,10 @@ public class EsconderPlayer : MonoBehaviour
         {
             moviendo = false;
             noInteractuar = false;
-            GetComponent<CharacterController>().enabled = true;
+            arbustoCollider.enabled = true;
             timer = 0;
             position = Vector3.zero;
+            GetComponent<PlayerMovement>().CanMove();
         }
     }
 
@@ -105,7 +116,6 @@ public class EsconderPlayer : MonoBehaviour
         if(dentroArbusto)
         {
             arbusto.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Activar");
-            print("a");
         }
     }
     public void ArbustoShakeSalir()
@@ -113,7 +123,6 @@ public class EsconderPlayer : MonoBehaviour
         if (!dentroArbusto)
         {
             arbusto.transform.GetChild(0).GetComponent<Animator>().SetTrigger("Activar");
-            print("b");
         }
     }
 
