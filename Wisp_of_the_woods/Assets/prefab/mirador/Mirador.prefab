@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8017413986276694092}
   - component: {fileID: 1303956150404407930}
   - component: {fileID: 4693907903948627587}
+  - component: {fileID: 2100564390052840434}
   m_Layer: 0
   m_Name: Mirador
   m_TagString: Untagged
@@ -78,3 +79,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2100564390052840434
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6420103723205503583}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.467909, y: 25.266987, z: 8.276053}
+  m_Center: {x: 0, y: 12.299213, z: 0}
