@@ -1,11 +1,8 @@
 fileFormatVersion: 2
-guid: d17fce60d29c9ce4dbb667a46a61f323
+guid: f18af63fd18d82a4fa298fd872523ed8
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable:
-  - first:
-      74: 1827226128182048838
-    second: Take 001
+  internalIDToNameTable: []
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -47,7 +44,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
@@ -85,7 +82,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     globalScale: 1
-    rootMotionBoneName: mixamorig:Hips
+    rootMotionBoneName: Hip_jt
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
