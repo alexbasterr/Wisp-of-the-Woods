@@ -11,6 +11,8 @@ public class Scientist : MonoBehaviour
     public DeteccionProximidad deteccionProximidad;
     public DeteccionSonido deteccionSonido;
     public Vision vision;
+    public Animator exclamacionAnim;
+    public Animator scientistAnim;
 
     #endregion
 
@@ -118,9 +120,20 @@ public class Scientist : MonoBehaviour
 
     IEnumerator InvestigarRuido()
     {
+        print("InvestigarRuido");
         Quaternion.FromToRotation(transform.forward,deteccionSonido.player.position);
 
-        yield return new WaitForSeconds(0.02f);
+        //Llamar animación alerta
+        exclamacionAnim.SetTrigger("alerta");
+        agent.isStopped = true;
+
+        deteccionSonido.haOido = false;
+        scientistAnim.enabled = false;
+
+        yield return new WaitForSeconds(1.5f);
+        scientistAnim.enabled = true;
+        
+        agent.isStopped = false;
 
         agent.SetDestination(deteccionSonido.player.position);
         
