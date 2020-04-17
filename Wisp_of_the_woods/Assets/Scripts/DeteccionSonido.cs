@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DeteccionSonido : MonoBehaviour
 {
-    bool puedeOir;
+    public bool puedeOir;
     public bool haOido;
     public Transform player;
 

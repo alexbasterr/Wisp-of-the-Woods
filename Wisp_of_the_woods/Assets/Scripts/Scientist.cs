@@ -3,41 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+
+public enum EnemyState
+{
+    Idle,
+    Patrol,
+    Investigate,
+    ChasePlayer
+}
+
 public class Scientist : MonoBehaviour
 {
     #region Attributes
-
+    Animator anim;
     NavMeshAgent agent;
     public DeteccionProximidad deteccionProximidad;
     public DeteccionSonido deteccionSonido;
     public Vision vision;
-    public Animator exclamacionAnim;
-    public Animator scientistAnim;
 
     #endregion
 
     #region Variables
+    public EnemyState enemyState;
+
     public List<Transform> Checkpoints = new List<Transform>();
     public int targetCheckpoint;
-    public GameObject Player()
-    {
-        if(vision.player != null)
-            return vision.player;
-        else if (deteccionProximidad.player != null)
-            return deteccionProximidad.player;
+    public float waitpointStopTime;
+    bool playerDetected;
+    public Vector3 playerPos;
 
-        return null;
-    }
-
-    private bool grounded;
-    private Vector3 posCur;
-    private Vector3 turnVector;
-    private Quaternion rotCur;
+    bool grounded;
+    Vector3 posCur;
+    Vector3 turnVector;
+    Quaternion rotCur;
     #endregion
 
-    private void Awake()
+    void Awake()
     {
         //Asignar Componentes
+        anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
         vision = transform.GetChild(1).GetComponent<Vision>();
         deteccionProximidad = transform.GetChild(2).GetComponent<DeteccionProximidad>();
@@ -53,26 +57,97 @@ public class Scientist : MonoBehaviour
             Checkpoints.RemoveAt(0);
         }
         targetCheckpoint = 0;
-
-        //Establecer primer Checkpoint
-        agent.SetDestination(Checkpoints[targetCheckpoint].position);
+        enemyState = EnemyState.Patrol;
+        StartCoroutine(Patrol());
     }
 
-    void Update()
+    IEnumerator Patrol()
+    {
+        agent.isStopped = false;
+        anim.SetBool("Walk",true);
+        agent.SetDestination(Checkpoints[targetCheckpoint].position);
+
+        yield return new WaitUntil(() => agent.isStopped);
+        anim.SetBool("Walk", false);
+        yield return new WaitForSeconds(waitpointStopTime);
+        if (enemyState == EnemyState.Patrol)
+        {
+            if (targetCheckpoint != Checkpoints.Count - 1)
+                targetCheckpoint++;
+            else
+                targetCheckpoint = 0;
+            StartCoroutine(Patrol());
+        }
+    }
+    IEnumerator Investigate(Vector3 soundPosition)
+    {
+        deteccionSonido.haOido = false;
+        agent.isStopped = true;
+        anim.SetBool("Walk", false);
+        yield return new WaitForSeconds(1);
+        agent.isStopped = false;
+        anim.SetBool("Walk", true);
+        agent.SetDestination(soundPosition);
+        yield return new WaitUntil(() => agent.isStopped);
+        anim.SetBool("Walk", false); 
+        yield return new WaitForSeconds(waitpointStopTime);
+        if(!playerDetected)
+        {
+            enemyState = EnemyState.Patrol;
+            StartCoroutine(Patrol());
+        }
+    }
+
+    IEnumerator ChasePlayer()
+    {
+        playerDetected = true;
+        Vector3 position;
+        position = FindObjectOfType<PlayerMovement>().transform.position;
+
+        agent.isStopped = false;
+        anim.SetBool("Walk", true);
+        agent.SetDestination(position);
+
+        yield return new WaitUntil(() => agent.isStopped);
+
+        anim.SetBool("Walk", false);
+
+        yield return new WaitForSeconds(waitpointStopTime);
+    }
+
+    private void Update()
+    {
+        if (agent.stoppingDistance >= agent.remainingDistance)
+            agent.isStopped = true;
+
+        if (!playerDetected)
+        {
+            if (deteccionSonido.puedeOir && !deteccionSonido.haOido)
+                playerPos = deteccionSonido.player.position;
+
+            if (vision.visto || deteccionProximidad.visto)
+            {
+                agent.stoppingDistance = 2;
+                StopAllCoroutines();
+                enemyState = EnemyState.ChasePlayer;
+                StartCoroutine(ChasePlayer());
+            }
+
+            if (deteccionSonido.haOido)
+            {
+                StopAllCoroutines();
+                enemyState = EnemyState.Investigate;
+                StartCoroutine(Investigate(playerPos));
+            }
+        }
+    }
+
+    void FixedUpdate()
     {
         //Orientarse con el suelo
         DetectFloor();
-
-        //Patrol si no ha visto al jugador, sino ir hacia el
-        if (!DetectadoPlayer() && !deteccionSonido.haOido)
-            checkpointComplete();
-        else if (deteccionSonido.haOido && !DetectadoPlayer())
-            Investigar();
-        else
-            PlayerVisto();
     }
-
-    public void DetectFloor()
+    void DetectFloor()
     {
         Ray ray = new Ray(new Vector3(transform.position.x, transform.position.y + 1, transform.position.z) /*+ transform.forward / 2*/, -transform.up);
         RaycastHit hit;
@@ -111,70 +186,5 @@ public class Scientist : MonoBehaviour
             transform.rotation = Quaternion.Lerp(transform.rotation, rotCur, Time.deltaTime);
 
         }
-    }
-
-    void Investigar()
-    {
-        StartCoroutine(InvestigarRuido());
-    }
-
-    IEnumerator InvestigarRuido()
-    {
-        print("InvestigarRuido");
-        Quaternion.FromToRotation(transform.forward,deteccionSonido.player.position);
-
-        //Llamar animación alerta
-        exclamacionAnim.SetTrigger("alerta");
-        agent.isStopped = true;
-
-        deteccionSonido.haOido = false;
-        scientistAnim.enabled = false;
-
-        yield return new WaitForSeconds(1.5f);
-        scientistAnim.enabled = true;
-        
-        agent.isStopped = false;
-
-        agent.SetDestination(deteccionSonido.player.position);
-        
-        if(agent.remainingDistance <= agent.stoppingDistance)
-        {
-            StartCoroutine(MirarAlrededor());
-        }
-    }
-    IEnumerator MirarAlrededor()
-    {
-        yield return new WaitForSeconds(2);
-
-        if (!DetectadoPlayer())
-        {
-            deteccionSonido.haOido = false;
-            yield return null;
-        }
-    }
-    public bool DetectadoPlayer()
-    {
-        if (Player() != null)
-            return true;
-        else
-            return false;
-    }
-
-    public void checkpointComplete()
-    {
-        if(agent.remainingDistance <= agent.stoppingDistance)
-        {
-            if (targetCheckpoint < Checkpoints.Count - 1)
-                targetCheckpoint++;
-            else
-                targetCheckpoint = 0;
-            
-            agent.SetDestination(Checkpoints[targetCheckpoint].position);
-        }
-    }
-
-    void PlayerVisto()
-    {
-        agent.SetDestination(Player().transform.position);
     }
 }

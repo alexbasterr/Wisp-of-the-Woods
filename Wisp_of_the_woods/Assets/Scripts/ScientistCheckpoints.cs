@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class ScientistCheckpoints : MonoBehaviour
 {
-
     public Scientist scientist;
-
-    
 }
