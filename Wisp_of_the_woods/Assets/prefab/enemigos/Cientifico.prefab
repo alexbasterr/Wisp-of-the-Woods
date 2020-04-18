@@ -497,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74db843d14802704da4cc125a5cc08b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puedeOir: 0
   haOido: 0
   player: {fileID: 0}
 --- !u!1 &2698295085602628481
@@ -607,6 +608,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEnRango: 0
   player: {fileID: 0}
+  visto: 0
+--- !u!1 &6129174082014931361
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6755257805709985620}
+  - component: {fileID: 6899004034651164458}
+  m_Layer: 0
+  m_Name: Spot Light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6755257805709985620
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129174082014931361}
+  m_LocalRotation: {x: 0.20717025, y: -0.01791641, z: -0.0006851424, w: 0.97814065}
+  m_LocalPosition: {x: 0.36900026, y: 0.779, z: 0.133}
+  m_LocalScale: {x: 0.6309146, y: 0.63091487, z: 0.6791796}
+  m_Children: []
+  m_Father: {fileID: 5664864371384310862}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 23.907001, y: -2.2150002, z: -0.549}
+--- !u!108 &6899004034651164458
+Light:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6129174082014931361}
+  m_Enabled: 1
+  serializedVersion: 9
+  m_Type: 0
+  m_Color: {r: 0.99979615, g: 1, b: 0.69803923, a: 1}
+  m_Intensity: 107.31
+  m_Range: 11.33
+  m_SpotAngle: 43
+  m_InnerSpotAngle: 21.80208
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 2
+    m_Resolution: -1
+    m_CustomResolution: -1
+    m_Strength: 1
+    m_Bias: 0.02
+    m_NormalBias: 0.1
+    m_NearPlane: 0.1
+    m_CullingMatrixOverride:
+      e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    m_UseCullingMatrixOverride: 0
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingLayerMask: 1
+  m_Lightmapping: 4
+  m_LightShadowCasterMode: 0
+  m_AreaSize: {x: 1, y: 1}
+  m_BounceIntensity: 1
+  m_ColorTemperature: 6570
+  m_UseColorTemperature: 0
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_UseBoundingSphereOverride: 0
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
 --- !u!54 &857672873828670908
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -651,12 +744,15 @@ MonoBehaviour:
   deteccionProximidad: {fileID: 0}
   deteccionSonido: {fileID: 0}
   vision: {fileID: 0}
+  enemyState: 0
   Checkpoints:
   - {fileID: 857672873438250229}
   - {fileID: 857672873560460647}
   - {fileID: 857672874241548011}
   - {fileID: 857672874339198005}
   targetCheckpoint: 0
+  waitpointStopTime: 0
+  playerPos: {x: 0, y: 0, z: 0}
 --- !u!195 &857672873828670899
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1459,6 +1555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerEnRango: 0
   player: {fileID: 0}
+  visto: 0
 --- !u!1001 &857672874007820116
 PrefabInstance:
   m_ObjectHideFlags: 0
