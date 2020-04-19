@@ -3169,6 +3169,7 @@ GameObject:
   - component: {fileID: 8294390712868215419}
   - component: {fileID: 4610209876527361476}
   - component: {fileID: 3197956443177003964}
+  - component: {fileID: 3246727783223307302}
   m_Layer: 0
   m_Name: group30_pCube815
   m_TagString: Untagged
@@ -3236,6 +3237,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3246727783223307302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3900003048835374308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 547.8203, y: 1412.2217, z: 543.89856}
+  m_Center: {x: -0.000040481216, y: 0.000051793606, z: 146.54634}
 --- !u!1 &3925426428349626240
 GameObject:
   m_ObjectHideFlags: 0
