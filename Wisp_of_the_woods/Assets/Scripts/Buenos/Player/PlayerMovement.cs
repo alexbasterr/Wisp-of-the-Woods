@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
     public float Velocity;
     [Space]
 
-
     public float InputX;
     public float InputZ;
     public Vector3 desiredMoveDirection;
@@ -75,7 +74,12 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetFloat("Mov", 0, StopAnimTime, Time.deltaTime);
         }
+
+        if (detectado)
+            GetComponent<PlayerCanvasController>().detectado = detectado;
     }
+
+   
 
     private void FixedUpdate()
     {
@@ -85,15 +89,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void AllignPlayer()
     {
-        Ray ray = new Ray(transform.position, -transform.up);
+        Ray ray = new Ray(new Vector3(transform.position.x,transform.position.y + 0.17f,transform.position.z), -transform.up);
         RaycastHit hit;
 
         if(Physics.Raycast(ray,out hit, layer))
         {
             Quaternion targetRotation = Quaternion.FromToRotation(player.up, hit.normal) * player.rotation;
             player.rotation = Quaternion.Slerp(player.rotation, targetRotation, 50 * Time.deltaTime);
+            player.localEulerAngles = new Vector3(player.localEulerAngles.x, 0, player.localEulerAngles.z);
         }
-        player.localEulerAngles = new Vector3(player.localEulerAngles.x, 0, player.localEulerAngles.z);
     }
 
     void PlayerMoveAndRotation()
