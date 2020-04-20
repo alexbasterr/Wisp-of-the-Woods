@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1533018306210784814}
   - component: {fileID: 448918895467432818}
   - component: {fileID: 197350305307183698}
+  - component: {fileID: 2279784214202241768}
   m_Layer: 0
   m_Name: arbusto12
   m_TagString: Decoracion
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &2279784214202241768
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4055144174448607188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.6254398
+  m_Height: 8.461008
+  m_Direction: 1
+  m_Center: {x: 0.005442415, y: 4.097336, z: -0.016543014}

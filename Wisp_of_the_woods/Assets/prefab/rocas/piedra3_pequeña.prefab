@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8274200714037347609}
   - component: {fileID: 2445266438176455136}
   - component: {fileID: 5694203687404338182}
+  - component: {fileID: 178466922172617949}
   m_Layer: 0
   m_Name: "piedra3_peque\xF1a"
   m_TagString: Decoracion
@@ -88,8 +89,22 @@ MeshCollider:
   m_GameObject: {fileID: 4166817918721658172}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -7870243168582585958, guid: ef6852f76bcafbe4a808d436e4a5d4c7, type: 3}
+--- !u!136 &178466922172617949
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166817918721658172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.3902225
+  m_Height: 26.021666
+  m_Direction: 1
+  m_Center: {x: 0.51820433, y: 11.258053, z: 0.009582433}

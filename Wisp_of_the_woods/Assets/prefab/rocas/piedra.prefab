@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8833944026801770227}
   - component: {fileID: 3000787282971062794}
   - component: {fileID: 2035709736099200873}
+  - component: {fileID: 8251400118795278111}
   m_Layer: 0
   m_Name: piedra
   m_TagString: Decoracion
@@ -88,8 +89,22 @@ MeshCollider:
   m_GameObject: {fileID: 3573648284309112534}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: 1535430970014009775, guid: 8d8a818a4b9c20243966c951f567a2b9, type: 3}
+--- !u!136 &8251400118795278111
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3573648284309112534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 2.8338492
+  m_Height: 22.409763
+  m_Direction: 1
+  m_Center: {x: 0.01613588, y: 8.406205, z: -0.5091287}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 317658936904933649}
   - component: {fileID: 6292659483948195304}
   - component: {fileID: 9059353977744480077}
+  - component: {fileID: -4645257252297538596}
   m_Layer: 0
   m_Name: roca2
   m_TagString: Decoracion
@@ -88,8 +89,22 @@ MeshCollider:
   m_GameObject: {fileID: 5722054744859191604}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
   m_Mesh: {fileID: -7617612675974110691, guid: 6ae259ec3b690c544b7d46e618a2f97c, type: 3}
+--- !u!136 &-4645257252297538596
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5722054744859191604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 5.45575
+  m_Height: 25.858269
+  m_Direction: 1
+  m_Center: {x: 0.61379665, y: 8.021757, z: 0.2547511}
