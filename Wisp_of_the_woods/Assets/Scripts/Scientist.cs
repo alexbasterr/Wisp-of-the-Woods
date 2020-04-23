@@ -15,6 +15,8 @@ public enum EnemyState
 public class Scientist : MonoBehaviour
 {
     #region Attributes
+    public GameObject exclamacion;
+    public RadarTarget exclamacionTarget;
     Animator anim;
     NavMeshAgent agent;
     public DeteccionProximidad deteccionProximidad;
@@ -40,6 +42,9 @@ public class Scientist : MonoBehaviour
 
     void Awake()
     {
+        exclamacion.SetActive(false);
+        exclamacionTarget.enabled = false;
+
         //Asignar Componentes
         anim = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
@@ -79,11 +84,18 @@ public class Scientist : MonoBehaviour
             StartCoroutine(Patrol());
         }
     }
+
+   
+
     IEnumerator Investigate(Vector3 soundPosition)
     {
         deteccionSonido.haOido = false;
         agent.isStopped = true;
         anim.SetBool("Walk", false);
+
+        exclamacion.SetActive(true);
+        exclamacionTarget.enabled = true;
+
         yield return new WaitForSeconds(1);
         agent.isStopped = false;
         anim.SetBool("Walk", true);
@@ -96,6 +108,10 @@ public class Scientist : MonoBehaviour
             enemyState = EnemyState.Patrol;
             StartCoroutine(Patrol());
         }
+
+        yield return new WaitUntil(() => exclamacion.transform.GetChild(0).GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Fin"));
+        exclamacion.SetActive(false);
+        exclamacionTarget.enabled = false;
     }
 
     IEnumerator ChasePlayer()

@@ -48,7 +48,7 @@ public class Radar : MonoBehaviour
         }
         
         Vector3 objectScreenPosition = myCamera.WorldToScreenPoint(target.transform.position);
-        objectScreenPosition = new Vector3(objectScreenPosition.x - (Screen.width * 0.5f), RadarY, 0);
+        objectScreenPosition = new Vector3(objectScreenPosition.x - (Screen.width * 0.5f), 0, 0);
         if(objectScreenPosition.x<RadarLeft || objectScreenPosition.x>RadarRight || myCamera.WorldToScreenPoint(target.transform.position).z<0)
         {
             objectsInAreaIcons[target].SetActive(false);
@@ -65,11 +65,9 @@ public class Radar : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other.gameObject.name);
         if(other.gameObject.GetComponent<RadarTarget>())
         {
-            print("DetectarObjetivo");
-            if(!other.gameObject.GetComponent<RadarTarget>().radars.Contains(this))
+            if(!other.gameObject.GetComponent<RadarTarget>().radars.Contains(this) && other.GetComponent<RadarTarget>().enabled)
             {
                 other.gameObject.GetComponent<RadarTarget>().radars.Add(this);
             }

@@ -45,7 +45,7 @@ public class EsconderPlayer : MonoBehaviour
                     lookPos.y = 0;
                     transform.rotation = Quaternion.LookRotation(lookPos);
 
-                    GetComponent<Animator>().SetTrigger("saltar");
+                    GetComponent<Animator>().SetBool("salirArbusto",true);
                     moviendo = true;
                     noInteractuar = true;
                 }
@@ -90,7 +90,14 @@ public class EsconderPlayer : MonoBehaviour
             timer = 4;
 
         transform.position = Vector3.Lerp(transform.position, position, curve.Evaluate(timer / 4));
+
+        if(transform.position == position)
+        {
+            GetComponent<Animator>().SetBool("salirArbusto", false);
+            FinAnimacion();
+        }
     }
+
     public void FinAnimacion()
     {
         if (dentroArbusto)
