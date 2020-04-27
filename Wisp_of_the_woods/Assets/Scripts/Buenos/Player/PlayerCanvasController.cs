@@ -10,6 +10,7 @@ public class PlayerCanvasController : MonoBehaviour
     public GameObject AullarCanvas;
     public GameObject SaltoCanvas;
     public GameObject menuPausa;
+    public GameObject menuControles;
     public Animator anim;
     PlayerMovement movement;
     public bool menuActivo;
@@ -23,11 +24,13 @@ public class PlayerCanvasController : MonoBehaviour
         movement = GetComponent<PlayerMovement>();
         menuActivo = false;
         menuPausa.SetActive(false);
+        menuControles.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
     {
-        print(Input.GetButtonDown("Menu"));
 
         if (Input.GetButtonDown("Menu"))
             OnMenu();
@@ -36,7 +39,7 @@ public class PlayerCanvasController : MonoBehaviour
 
             if (goToCheckPoint)
             {
-                LoadSceneMenu(1);
+                LoadSceneMenu(2);
             }
             else if (goToMenu)
             {
@@ -48,6 +51,9 @@ public class PlayerCanvasController : MonoBehaviour
         {
             ReloadCheckPoint();
         }
+
+        if (menuControles.activeInHierarchy && Input.GetButtonDown("Aullar"))
+            menuControles.SetActive(false);
     }
 
     void OnMenu()
@@ -66,29 +72,38 @@ public class PlayerCanvasController : MonoBehaviour
 
     public void Resume()
     {
-        menuActivo = false;
-        menuPausa.SetActive(menuActivo);
-        Time.timeScale = 1;
-        movement.enabled = true;
+        if (!menuControles.activeInHierarchy)
+        {
+            menuActivo = false;
+            menuPausa.SetActive(menuActivo);
+            Time.timeScale = 1;
+            movement.enabled = true;
+        }
     }
 
     public void ReloadCheckPoint()
     {
-        Time.timeScale = 1;
-        goToCheckPoint = true;
-        anim.SetBool("On", true);
+        if (!menuControles.activeInHierarchy)
+        {
+            Time.timeScale = 1;
+            goToCheckPoint = true;
+            anim.SetBool("On", true);
+        }
     }
 
     public void Options()
     {
-
+        menuControles.SetActive(true);
     }
 
     public void GoToMenu()
     {
-        Time.timeScale = 1;
-        goToMenu = true;
-        anim.SetBool("On", true);
+        if (!menuControles.activeInHierarchy)
+        {
+            Time.timeScale = 1;
+            goToMenu = true;
+            anim.SetBool("On", true);
+        }
     }
 
 

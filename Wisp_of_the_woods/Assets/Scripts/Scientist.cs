@@ -16,7 +16,6 @@ public class Scientist : MonoBehaviour
 {
     #region Attributes
     public GameObject exclamacion;
-    public RadarTarget exclamacionTarget;
     Animator anim;
     NavMeshAgent agent;
     public DeteccionProximidad deteccionProximidad;
@@ -43,7 +42,6 @@ public class Scientist : MonoBehaviour
     void Awake()
     {
         exclamacion.SetActive(false);
-        exclamacionTarget.enabled = false;
 
         //Asignar Componentes
         anim = GetComponent<Animator>();
@@ -94,7 +92,6 @@ public class Scientist : MonoBehaviour
         anim.SetBool("Walk", false);
 
         exclamacion.SetActive(true);
-        exclamacionTarget.enabled = true;
 
         yield return new WaitForSeconds(1);
         agent.isStopped = false;
@@ -111,7 +108,6 @@ public class Scientist : MonoBehaviour
 
         yield return new WaitUntil(() => exclamacion.transform.GetChild(0).GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsTag("Fin"));
         exclamacion.SetActive(false);
-        exclamacionTarget.enabled = false;
     }
 
     IEnumerator ChasePlayer()

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
     guid: 3deaba20496cf1c4dafc08ffd7303bcc
   - enabled: 1
+    path: "Assets/Scenes/Vi\xF1etas.unity"
+    guid: cc7c2e831f6cc594295755b929986051
+  - enabled: 1
     path: Assets/Scenes/MAPA - copia.unity
     guid: f5fa254b832e0ed48b15d375857d84f0
   m_configObjects: {}
