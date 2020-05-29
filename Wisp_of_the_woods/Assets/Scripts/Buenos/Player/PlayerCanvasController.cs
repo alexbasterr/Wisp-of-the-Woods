@@ -4,8 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
+
 public class PlayerCanvasController : MonoBehaviour
 {
+    bool cinematicaHecha = false;
 
     public GameObject AullarCanvas;
     public GameObject SaltoCanvas;
@@ -19,6 +22,12 @@ public class PlayerCanvasController : MonoBehaviour
     [HideInInspector]
     public bool detectado;
 
+    public List<Transform> checkpoints = new List<Transform>();
+    public List<Transform> objetivos = new List<Transform>();
+    public Transform CheckpointParent;
+    public int actualChekpoint;
+    public GameObject camaraCinematica;
+
     private void Awake()
     {
         movement = GetComponent<PlayerMovement>();
@@ -27,10 +36,64 @@ public class PlayerCanvasController : MonoBehaviour
         menuControles.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        SetCheckpoints();
+
+    }
+
+
+    void SetCheckpoints()
+    {
+        int i = 0;
+
+        foreach (Transform child in CheckpointParent)
+        {
+            checkpoints.Add(child);
+            child.GetComponent<Checkpoint>().checkpointNumber = i;
+            i++;
+        }
     }
 
     void Update()
     {
+
+        if(actualChekpoint == 1 && !cinematicaHecha)
+        {
+            cinematicaHecha = true;
+            camaraCinematica.SetActive(true);
+            movement.enabled = false;
+            StartCoroutine(ActiveMovement());
+        }
+
+        if(actualChekpoint == 1)
+        {
+            objetivos[0].position = objetivos[1].position;
+        }
+        else if(actualChekpoint == 2)
+        {
+            objetivos[0].position = objetivos[2].position;
+            objetivos[1].position = objetivos[2].position;
+        }
+        else if (actualChekpoint == 3)
+        {
+            objetivos[0].position = objetivos[3].position;
+            objetivos[1].position = objetivos[3].position;
+            objetivos[2].position = objetivos[3].position;
+        }
+        else if (actualChekpoint == 4)
+        {
+            objetivos[0].position = objetivos[4].position;
+            objetivos[1].position = objetivos[4].position;
+            objetivos[2].position = objetivos[4].position;
+            objetivos[3].position = objetivos[4].position;
+        }
+
+        for (int i = 0; i < objetivos.Count; i++)
+        {
+            if (i == actualChekpoint)
+                objetivos[i].gameObject.SetActive(true);
+            else
+                objetivos[i].gameObject.SetActive(false);
+        }
 
         if (Input.GetButtonDown("Menu"))
             OnMenu();
@@ -39,7 +102,7 @@ public class PlayerCanvasController : MonoBehaviour
 
             if (goToCheckPoint)
             {
-                LoadSceneMenu(2);
+                GoToCheckpoint();
             }
             else if (goToMenu)
             {
@@ -54,6 +117,24 @@ public class PlayerCanvasController : MonoBehaviour
 
         if (menuControles.activeInHierarchy && Input.GetButtonDown("Aullar"))
             menuControles.SetActive(false);
+
+        if (Input.GetKeyDown(KeyCode.R))
+            ReloadCheckPoint();
+    }
+
+
+    IEnumerator ActiveMovement()
+    {
+        yield return new WaitForSeconds(16.2f);
+        movement.enabled = true;
+        camaraCinematica.SetActive(false);
+    }
+    void GoToCheckpoint()
+    {
+        transform.position = checkpoints[actualChekpoint].position;
+        transform.rotation = checkpoints[actualChekpoint].rotation;
+        anim.SetBool("On", false);
+        Resume();
     }
 
     void OnMenu()
@@ -62,6 +143,8 @@ public class PlayerCanvasController : MonoBehaviour
         menuPausa.SetActive(menuActivo);
         Time.timeScale = 0;
         movement.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         
     }
         
@@ -78,6 +161,9 @@ public class PlayerCanvasController : MonoBehaviour
             menuPausa.SetActive(menuActivo);
             Time.timeScale = 1;
             movement.enabled = true;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
